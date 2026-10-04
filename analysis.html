@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis &mdash; Kelvin Apau</title>
+  <meta name="description" content="Key figures from Kelvin Apau's data analysis projects.">
+  <meta name="theme-color" content="#f5efe2">
+
+  <!-- Inline SVG favicon: Memphis style half-coral half-teal -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2312b3a4' stroke='%2317140d' stroke-width='4'/%3E%3Cpath d='M2 32a30 30 0 0 1 60 0z' fill='%23ff5b57'/%3E%3C/svg%3E">
+
+  <!-- Google Fonts: Bricolage Grotesque (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top" class="subpage">
+
+  <!-- Skip link -->
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============ ANIMATED MEMPHIS CONFETTI ============ -->
+  <div class="confetti" aria-hidden="true">
+    <!-- Coral triangle -->
+    <svg class="confetti__shape confetti__triangle" viewBox="0 0 60 52" width="60" height="52">
+      <polygon points="30,2 58,50 2,50" fill="#ff5b57" stroke="#17140d" stroke-width="4"/>
+    </svg>
+    <!-- Teal quarter-arc -->
+    <svg class="confetti__shape confetti__arc" viewBox="0 0 60 60" width="50" height="50">
+      <path d="M5,55 A50,50 0 0,1 55,5" fill="none" stroke="#12b3a4" stroke-width="8" stroke-linecap="round"/>
+      <path d="M5,55 A50,50 0 0,1 55,5 L55,55 Z" fill="#12b3a4" stroke="#17140d" stroke-width="4" opacity=".85"/>
+    </svg>
+    <!-- Mustard dotted circle -->
+    <svg class="confetti__shape confetti__dotcircle" viewBox="0 0 56 56" width="56" height="56">
+      <circle cx="28" cy="28" r="24" fill="none" stroke="#ffc531" stroke-width="4" stroke-dasharray="4 8" stroke-linecap="round"/>
+    </svg>
+    <!-- Violet plus sign -->
+    <svg class="confetti__shape confetti__plus" viewBox="0 0 44 44" width="44" height="44">
+      <rect x="16" y="2" width="12" height="40" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
+      <rect x="2" y="16" width="40" height="12" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
+    </svg>
+    <!-- Black squiggle bacteria -->
+    <svg class="confetti__shape confetti__squiggle" viewBox="0 0 80 30" width="80" height="30">
+      <path d="M4,15 C12,4 20,26 28,15 C36,4 44,26 52,15 C60,4 68,26 76,15" fill="none" stroke="#17140d" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <!-- Mustard half-circle -->
+    <svg class="confetti__shape confetti__half" viewBox="0 0 50 28" width="50" height="28">
+      <path d="M3,26 A22,22 0 0,1 47,26 Z" fill="#ffc531" stroke="#17140d" stroke-width="3"/>
+    </svg>
+    <!-- Small teal dot -->
+    <svg class="confetti__shape confetti__dot" viewBox="0 0 20 20" width="20" height="20">
+      <circle cx="10" cy="10" r="8" fill="#12b3a4" stroke="#17140d" stroke-width="3"/>
+    </svg>
+    <!-- Sky-blue zigzag -->
+    <svg class="confetti__shape confetti__zigzag" viewBox="0 0 70 40" width="70" height="40">
+      <polyline points="4,36 18,4 32,36 46,4 60,36" fill="none" stroke="#3aa0ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <!-- Coral striped circle -->
+    <svg class="confetti__shape confetti__striped" viewBox="0 0 52 52" width="52" height="52">
+      <defs>
+        <pattern id="stripes" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+          <line x1="0" y1="0" x2="0" y2="6" stroke="#17140d" stroke-width="2"/>
+        </pattern>
+      </defs>
+      <circle cx="26" cy="26" r="22" fill="#ff5b57" stroke="#17140d" stroke-width="4"/>
+      <circle cx="26" cy="26" r="22" fill="url(#stripes)"/>
+    </svg>
+  </div>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="nav" aria-label="Main">
+    <div class="nav__inner">
+      <div class="nav__brand">
+        <div class="nav__logo" aria-hidden="true">
+          <svg viewBox="0 0 28 28" width="28" height="28"><path d="M6,14 C10,6 14,22 18,14 C22,6 24,18 26,14" fill="none" stroke="#17140d" stroke-width="3" stroke-linecap="round"/></svg>
+        </div>
+        <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
+      </div>
+      <div class="nav__links" id="nav-links">
+        <a href="analysis.html" aria-current="page">Analysis</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="background.html">Background</a>
+        <a class="nav__contact-link" href="contact.html">Contact</a>
+      </div>
+      <a class="nav__cta" href="contact.html">Get in touch</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <main id="main" class="page">
+
+    <section class="analysis" id="analysis" aria-labelledby="analysis-heading">
+      <span class="features__eyebrow">Analysis</span>
+      <h2 class="features__heading" id="analysis-heading">The numbers behind the notebooks.</h2>
+
+      <div class="dash" id="dash">
+        <div class="mockup__chrome" aria-hidden="true">
+          <span class="mockup__dot" style="background:#ff5b57"></span>
+          <span class="mockup__dot" style="background:#ffc531"></span>
+          <span class="mockup__dot" style="background:#12b3a4"></span>
+        </div>
+        <div class="mockup__titlebar">Analysis Dashboard — Kelvin Apau</div>
+
+        <div class="dash__body">
+
+          <!-- Ghana inflation -->
+          <article class="dash__panel" style="--i:0">
+            <div class="dash__row">
+              <h3 class="dash__title">Ghana CPI and inflation</h3>
+              <span class="mockup__pill">Year-on-year</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="54.17" data-decimals="2" data-suffix="%">54.17%</span>
+              <span class="dash__label">peak, December 2022</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Peak, Dec 2022</span><strong>54.17%</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:90.28%;--c:var(--coral)"></div></div>
+            </div>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>2023 average</span><strong>40.28%</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:67.13%;--c:var(--mustard)"></div></div>
+            </div>
+          </article>
+
+          <!-- Global banknotes -->
+          <article class="dash__panel" style="--i:1">
+            <div class="dash__row">
+              <h3 class="dash__title">Global banknotes</h3>
+              <span class="mockup__pill">38 countries</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="241" data-decimals="0">241</span>
+              <span class="dash__label">figures on banknotes</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Men 78.01%</span><span>Women 21.99%</span></div>
+              <div class="dash__bar-track dash__bar-track--split">
+                <div class="dash__fill" style="--w:78.01%;--c:var(--teal)"></div>
+                <div class="dash__fill" style="--w:21.99%;--c:var(--violet)"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Solar eclipses -->
+          <article class="dash__panel" style="--i:2">
+            <div class="dash__row">
+              <h3 class="dash__title">Solar eclipses, 1901 to 2100</h3>
+              <span class="mockup__pill">Totality</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="428" data-decimals="0" data-suffix=" s">428 s</span>
+              <span class="dash__label">longest, June 20, 1955</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Longest</span><strong>428 s</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:100%;--c:var(--sky)"></div></div>
+            </div>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Average</span><strong>211.96 s</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:49.52%;--c:var(--mustard)"></div></div>
+            </div>
+          </article>
+
+          <!-- Project completion -->
+          <article class="dash__panel" style="--i:3">
+            <div class="dash__row">
+              <h3 class="dash__title">Project completion</h3>
+              <span class="mockup__pill"><span class="dash__num" data-count="4" data-decimals="0">4</span> of 5 done</span>
+            </div>
+            <div class="dash__bar dash__bar--overall">
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:80%;--c:var(--teal)"></div></div>
+            </div>
+            <ul class="dash__checklist">
+              <li class="mockup__check mockup__check--done" style="--k:0"><span class="mockup__checkbox">✓</span>Ghana CPI and inflation</li>
+              <li class="mockup__check mockup__check--done" style="--k:1"><span class="mockup__checkbox">✓</span>NYC Airbnb listings</li>
+              <li class="mockup__check mockup__check--done" style="--k:2"><span class="mockup__checkbox">✓</span>Global banknotes</li>
+              <li class="mockup__check mockup__check--done" style="--k:3"><span class="mockup__checkbox">✓</span>Solar eclipses</li>
+              <li class="mockup__check mockup__check--live" style="--k:4"><span class="mockup__checkbox"></span>SentinelNIDS, in progress</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager" aria-label="Page navigation">
+      <a class="btn btn--ghost" href="index.html">&larr; Home</a>
+      <a class="btn btn--primary" href="projects.html">Projects &rarr;</a>
+    </nav>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p>© <span id="footer-year">2026</span> Kelvin Kwabena Apau</p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
