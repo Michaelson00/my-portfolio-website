@@ -6,6 +6,16 @@
   <title>Projects &mdash; Kelvin Apau</title>
   <meta name="description" content="Data science projects by Kelvin Apau: Ghana inflation, NYC Airbnb, banknotes and more.">
   <meta name="theme-color" content="#f5efe2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kelvin Apau">
+  <meta property="og:title" content="Projects &mdash; Kelvin Apau">
+  <meta property="og:description" content="Data science projects by Kelvin Apau: Ghana inflation, NYC Airbnb, banknotes and more.">
+  <meta property="og:url" content="https://kevap.vercel.app/projects.html">
+  <meta property="og:image" content="https://kevap.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Kelvin Apau, Data Science and Analytics student. Portfolio at kevap.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Inline SVG favicon: Memphis style half-coral half-teal -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2312b3a4' stroke='%2317140d' stroke-width='4'/%3E%3Cpath d='M2 32a30 30 0 0 1 60 0z' fill='%23ff5b57'/%3E%3C/svg%3E">
@@ -33,40 +43,14 @@
       <path d="M5,55 A50,50 0 0,1 55,5" fill="none" stroke="#12b3a4" stroke-width="8" stroke-linecap="round"/>
       <path d="M5,55 A50,50 0 0,1 55,5 L55,55 Z" fill="#12b3a4" stroke="#17140d" stroke-width="4" opacity=".85"/>
     </svg>
-    <!-- Mustard dotted circle -->
-    <svg class="confetti__shape confetti__dotcircle" viewBox="0 0 56 56" width="56" height="56">
-      <circle cx="28" cy="28" r="24" fill="none" stroke="#ffc531" stroke-width="4" stroke-dasharray="4 8" stroke-linecap="round"/>
-    </svg>
     <!-- Violet plus sign -->
     <svg class="confetti__shape confetti__plus" viewBox="0 0 44 44" width="44" height="44">
       <rect x="16" y="2" width="12" height="40" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
       <rect x="2" y="16" width="40" height="12" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
     </svg>
-    <!-- Black squiggle bacteria -->
-    <svg class="confetti__shape confetti__squiggle" viewBox="0 0 80 30" width="80" height="30">
-      <path d="M4,15 C12,4 20,26 28,15 C36,4 44,26 52,15 C60,4 68,26 76,15" fill="none" stroke="#17140d" stroke-width="4" stroke-linecap="round"/>
-    </svg>
     <!-- Mustard half-circle -->
     <svg class="confetti__shape confetti__half" viewBox="0 0 50 28" width="50" height="28">
       <path d="M3,26 A22,22 0 0,1 47,26 Z" fill="#ffc531" stroke="#17140d" stroke-width="3"/>
-    </svg>
-    <!-- Small teal dot -->
-    <svg class="confetti__shape confetti__dot" viewBox="0 0 20 20" width="20" height="20">
-      <circle cx="10" cy="10" r="8" fill="#12b3a4" stroke="#17140d" stroke-width="3"/>
-    </svg>
-    <!-- Sky-blue zigzag -->
-    <svg class="confetti__shape confetti__zigzag" viewBox="0 0 70 40" width="70" height="40">
-      <polyline points="4,36 18,4 32,36 46,4 60,36" fill="none" stroke="#3aa0ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <!-- Coral striped circle -->
-    <svg class="confetti__shape confetti__striped" viewBox="0 0 52 52" width="52" height="52">
-      <defs>
-        <pattern id="stripes" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="6" stroke="#17140d" stroke-width="2"/>
-        </pattern>
-      </defs>
-      <circle cx="26" cy="26" r="22" fill="#ff5b57" stroke="#17140d" stroke-width="4"/>
-      <circle cx="26" cy="26" r="22" fill="url(#stripes)"/>
     </svg>
   </div>
 
@@ -82,9 +66,7 @@
       <div class="nav__links" id="nav-links">
         <a href="analysis.html">Analysis</a>
         <a href="projects.html" aria-current="page">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="background.html">Background</a>
+        <a href="about.html">About</a>
         <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
       <a class="nav__cta" href="contact.html">Get in touch</a>
@@ -107,6 +89,7 @@
           <h3 class="card__title">Ghana CPI and inflation</h3>
           <p class="card__body">Year-on-year inflation peaked at 54.17% in December 2022 and averaged 40.28% across 2023.</p>
           <p class="card__tools">Python, pandas, NumPy, Matplotlib</p>
+          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
           <div class="card__accent card__accent--coral" aria-hidden="true"></div>
         </div>
 
@@ -127,6 +110,7 @@
           <h3 class="card__title">Global banknotes</h3>
           <p class="card__body">Across 241 figures from 38 countries, 78.01% are men and 21.99% are women.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
+          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
           <div class="card__accent card__accent--violet" aria-hidden="true"></div>
         </div>
 
@@ -142,6 +126,7 @@
           <h3 class="card__title">Solar eclipses, 1901 to 2100</h3>
           <p class="card__body">The longest total eclipse lasted 428 seconds on June 20, 1955. Average: 211.96 seconds.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
+          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </div>
 
@@ -173,7 +158,7 @@
 
     <nav class="pager" aria-label="Page navigation">
       <a class="btn btn--ghost" href="analysis.html">&larr; Analysis</a>
-      <a class="btn btn--primary" href="skills.html">Skills &rarr;</a>
+      <a class="btn btn--primary" href="about.html">About &rarr;</a>
     </nav>
   </main>
 

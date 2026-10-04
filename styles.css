@@ -13,6 +13,8 @@
   --ink: #17140d;
   --teal: #12b3a4;
   --coral: #ff5b57;
+  --coral-text: #c42a26; /* darker coral for small text, passes 4.5:1 */
+  --teal-text: #087067;  /* darker teal for small text, passes 4.5:1 */
   --mustard: #ffc531;
   --violet: #6b5be6;
   --sky: #3aa0ff;
@@ -64,33 +66,25 @@ img { max-width: 100%; display: block; }
   will-change: transform;
 }
 
-/* Positions */
+/* Positions (four shapes only, kept to the edges away from the text) */
 .confetti__triangle  { top: 8%;  left: 4%;  }
 .confetti__arc       { top: 18%; right: 6%; }
-.confetti__dotcircle { top: 55%; left: 2%;  }
-.confetti__plus      { top: 12%; left: 48%; }
-.confetti__squiggle  { top: 72%; right: 10%;}
+.confetti__plus      { top: 50%; left: 3%;  }
 .confetti__half      { top: 38%; right: 3%; }
-.confetti__dot       { top: 82%; left: 12%; }
-.confetti__zigzag    { top: 45%; left: 8%;  }
-.confetti__striped   { top: 28%; left: 22%; }
 
 /* Keyframes */
 @keyframes drift    { 0%,100% { transform: translateY(0) rotate(0deg); }   50% { transform: translateY(-18px) rotate(8deg); } }
 @keyframes spin     { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes bob      { 0%,100% { transform: translateY(0); }               50% { transform: translateY(-14px); } }
-@keyframes sway     { 0%,100% { transform: rotate(-6deg); }               50% { transform: rotate(6deg); } }
 @keyframes float    { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-22px) rotate(3deg); } }
 
+/* Only the home page moves. Inner pages hold still so text is easy to read. */
 .confetti__triangle  { animation: drift 7s ease-in-out infinite; }
 .confetti__arc       { animation: float 9s ease-in-out infinite; }
-.confetti__dotcircle { animation: spin 26s linear infinite; }
 .confetti__plus      { animation: spin 20s linear infinite; }
-.confetti__squiggle  { animation: sway 5s ease-in-out infinite; transform-origin: top center; }
 .confetti__half      { animation: bob 6s ease-in-out infinite; }
-.confetti__dot       { animation: drift 8s ease-in-out infinite 1s; }
-.confetti__zigzag    { animation: bob 5.5s ease-in-out infinite; }
-.confetti__striped   { animation: spin 18s linear infinite; }
+.subpage .confetti { opacity: .6; }
+.subpage .confetti__shape { animation: none; }
 
 /* ============================================================
    NAVIGATION
@@ -131,9 +125,9 @@ img { max-width: 100%; display: block; }
   font-weight: 500; font-size: 14px;
   transition: color .2s;
 }
-.nav__links a:hover { color: var(--coral); }
+.nav__links a:hover { color: var(--coral-text); }
 .nav__links a[aria-current="page"] {
-  color: var(--coral);
+  color: var(--coral-text);
   text-decoration: underline;
   text-decoration-thickness: 3px;
   text-underline-offset: 6px;
@@ -174,11 +168,11 @@ img { max-width: 100%; display: block; }
 .explore__num {
   display: block;
   font-family: var(--font-display); font-weight: 800; font-size: 14px;
-  letter-spacing: .1em; color: var(--coral);
+  letter-spacing: .1em; color: var(--coral-text);
   margin-bottom: 8px;
 }
 .explore__go { display: inline-block; margin-top: 4px; font-weight: 700; font-size: 14px; }
-.explore__card:hover .explore__go { color: var(--coral); }
+.explore__card:hover .explore__go { color: var(--coral-text); }
 
 /* Scroll-drawn connector + zoom in/out cards (driven by script.js) */
 .features__grid.explore__grid {
@@ -220,7 +214,7 @@ img { max-width: 100%; display: block; }
   stroke: var(--ink); stroke-width: 3;
 }
 .explore__grid.is-live .explore__num { color: var(--muted); transition: color .3s; }
-.explore__grid.is-live .explore__card.is-reached .explore__num { color: var(--coral); }
+.explore__grid.is-live .explore__card.is-reached .explore__num { color: var(--coral-text); }
 
 /* Sub-pages: clear the fixed nav, keep the footer at the bottom */
 .subpage { display: flex; flex-direction: column; min-height: 100vh; }
@@ -228,7 +222,7 @@ img { max-width: 100%; display: block; }
 .nav__cta {
   font-family: var(--font-body);
   font-weight: 700; font-size: 14px;
-  color: #fff;
+  color: var(--ink);
   background: var(--teal);
   border: var(--outline);
   border-radius: 100px;
@@ -335,7 +329,7 @@ img { max-width: 100%; display: block; }
 }
 .btn--primary {
   background: var(--coral);
-  color: #fff;
+  color: var(--ink);
   box-shadow: var(--shadow-lg);
 }
 .btn--ghost {
@@ -352,25 +346,6 @@ img { max-width: 100%; display: block; }
   margin-bottom: 32px;
 }
 
-/* Trust row */
-.hero__trust {
-  display: flex; align-items: center; justify-content: center; gap: 14px;
-  text-align: left;
-}
-.hero__avatars {
-  display: flex;
-}
-.hero__avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  border: 3px solid var(--ink);
-  display: grid; place-items: center;
-  font-family: var(--font-display);
-  font-weight: 800; font-size: 15px;
-  color: #fff;
-  margin-right: -10px;
-}
-.hero__avatar:last-child { margin-right: 0; }
 .hero__proof {
   font-size: 13px; line-height: 1.4;
   color: var(--muted);
@@ -398,7 +373,7 @@ img { max-width: 100%; display: block; }
 }
 .mockup__pill {
   font-size: 12px; font-weight: 700;
-  color: #fff;
+  color: var(--ink);
   background: var(--teal);
   border: 2px solid var(--ink);
   border-radius: 100px;
@@ -426,7 +401,7 @@ img { max-width: 100%; display: block; }
 }
 .mockup__check--done .mockup__checkbox {
   background: var(--teal);
-  color: #fff;
+  color: var(--ink);
 }
 .mockup__check--live .mockup__checkbox {
   background: var(--mustard);
@@ -646,6 +621,8 @@ img { max-width: 100%; display: block; }
   gap: 24px;
   margin-bottom: 24px;
 }
+.features__grid--two { grid-template-columns: repeat(2, 1fr); max-width: 800px; }
+.about section + section { padding-top: 0; }
 .features__planned {
   font-size: 14px;
   color: var(--muted);
@@ -698,11 +675,18 @@ img { max-width: 100%; display: block; }
   text-transform: uppercase;
   letter-spacing: .08em;
 }
+.card__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: 700; font-size: 14px;
+  text-decoration: underline; text-underline-offset: 3px;
+}
+.card__link:hover { color: var(--coral-text); }
 .card__status {
   display: inline-block;
   font-size: 12px; font-weight: 700;
-  color: var(--teal);
-  border: 2px solid var(--teal);
+  color: var(--teal-text);
+  border: 2px solid var(--teal-text);
   border-radius: 100px;
   padding: 2px 10px;
   margin-top: 8px;
@@ -789,7 +773,7 @@ img { max-width: 100%; display: block; }
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: .1em;
-  color: var(--coral);
+  color: var(--coral-text);
   display: block;
   margin-bottom: 4px;
 }
@@ -838,7 +822,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(15px, 3vw, 22px);
-  color: var(--coral);
+  color: var(--coral-text);
   word-break: break-all;
 }
 .contact__email:hover { text-decoration: underline; }
@@ -849,12 +833,12 @@ img { max-width: 100%; display: block; }
 .contact__status {
   font-size: 13px;
   font-weight: 600;
-  color: var(--teal);
+  color: var(--teal-text);
   min-height: 20px;
   margin-bottom: 20px;
 }
 .contact__links {
-  display: flex; justify-content: center; gap: 12px;
+  display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
 }
 
 /* ============================================================
@@ -876,7 +860,7 @@ img { max-width: 100%; display: block; }
   font-size: 13px; font-weight: 600;
   color: var(--ink);
 }
-.footer__inner a:hover { color: var(--coral); }
+.footer__inner a:hover { color: var(--coral-text); }
 
 /* ============================================================
    FOCUS STYLES

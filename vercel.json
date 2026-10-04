@@ -2,5 +2,22 @@
   "framework": null,
   "buildCommand": null,
   "installCommand": null,
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/skills.html",
+      "destination": "/about.html#skills",
+      "permanent": true
+    },
+    {
+      "source": "/timeline.html",
+      "destination": "/about.html#timeline",
+      "permanent": true
+    },
+    {
+      "source": "/background.html",
+      "destination": "/about.html#work",
+      "permanent": true
+    }
+  ]
 }
