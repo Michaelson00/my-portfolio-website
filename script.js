@@ -7,6 +7,43 @@
 (function () {
   'use strict';
 
+  /* ---- Theme toggle (sun / moon) ---- */
+  var themeBtn = document.getElementById('theme-toggle');
+  var rootEl = document.documentElement;
+  var themeMeta = document.querySelector('meta[name="theme-color"]');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var showTheme = function (t) {
+    rootEl.setAttribute('data-theme', t);
+    if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#15130e' : '#f5efe2');
+    if (themeBtn) {
+      themeBtn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
+      themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    }
+  };
+
+  var savedTheme = null;
+  try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+  showTheme(rootEl.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+
+  if (themeBtn) {
+    themeBtn.addEventListener('click', function () {
+      var next = rootEl.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      if (!reducedMotion) {
+        rootEl.classList.add('theme-fade');
+        setTimeout(function () { rootEl.classList.remove('theme-fade'); }, 500);
+      }
+      showTheme(next);
+      savedTheme = next;
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
+  // Until the visitor picks a theme, follow the system setting
+  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
+  var onSystemChange = function (e) { if (!savedTheme) showTheme(e.matches ? 'dark' : 'light'); };
+  if (systemDark.addEventListener) systemDark.addEventListener('change', onSystemChange);
+
   /* ---- Footer year ---- */
   var yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
