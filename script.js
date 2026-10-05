@@ -39,11 +39,6 @@
     });
   }
 
-  // Until the visitor picks a theme, follow the system setting
-  var systemDark = window.matchMedia('(prefers-color-scheme: dark)');
-  var onSystemChange = function (e) { if (!savedTheme) showTheme(e.matches ? 'dark' : 'light'); };
-  if (systemDark.addEventListener) systemDark.addEventListener('change', onSystemChange);
-
   /* ---- Footer year ---- */
   var yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
