@@ -5,8 +5,8 @@
   "outputDirectory": ".",
   "redirects": [
     {
-      "source": "/skills.html",
-      "destination": "/about.html#skills",
+      "source": "/analysis.html",
+      "destination": "/projects.html#numbers",
       "permanent": true
     },
     {

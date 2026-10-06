@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects &mdash; Kelvin Apau</title>
-  <meta name="description" content="Data science projects by Kelvin Apau: Ghana inflation, NYC Airbnb, banknotes and more.">
+  <meta name="description" content="Data analyses on Ghana inflation, NYC Airbnb, global banknotes and solar eclipses, plus a team intrusion detection project.">
   <meta name="theme-color" content="#f5efe2">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
   <meta property="og:title" content="Projects &mdash; Kelvin Apau">
-  <meta property="og:description" content="Data science projects by Kelvin Apau: Ghana inflation, NYC Airbnb, banknotes and more.">
+  <meta property="og:description" content="Data analyses on Ghana inflation, NYC Airbnb, global banknotes and solar eclipses, plus a team intrusion detection project.">
   <meta property="og:url" content="https://kevap.vercel.app/projects.html">
   <meta property="og:image" content="https://kevap.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -67,6 +67,7 @@
     </svg>
   </div>
 
+
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" aria-label="Main">
     <div class="nav__inner">
@@ -77,12 +78,14 @@
         <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
       </div>
       <div class="nav__links" id="nav-links">
-        <a href="analysis.html">Analysis</a>
         <a href="projects.html" aria-current="page">Projects</a>
-        <a href="about.html">About</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="awards.html">Awards</a>
         <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
-      <a class="nav__cta" href="contact.html">Get in touch</a>
+      <a class="nav__cta" href="contact.html">Contact</a>
       <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -103,7 +106,7 @@
           <h3 class="card__title">Ghana CPI and inflation</h3>
           <p class="card__body">Year-on-year inflation peaked at 54.17% in December 2022 and averaged 40.28% across 2023.</p>
           <p class="card__tools">Python, pandas, NumPy, Matplotlib</p>
-          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
+          <a class="card__link" href="#numbers">See the numbers &rarr;</a>
           <div class="card__accent card__accent--coral" aria-hidden="true"></div>
         </div>
 
@@ -124,14 +127,14 @@
           <h3 class="card__title">Global banknotes</h3>
           <p class="card__body">Across 241 figures from 38 countries, 78.01% are men and 21.99% are women.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
-          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
+          <a class="card__link" href="#numbers">See the numbers &rarr;</a>
           <div class="card__accent card__accent--violet" aria-hidden="true"></div>
         </div>
 
       </div>
 
       <!-- More projects row -->
-      <div class="features__grid features__grid--more">
+      <div class="features__grid">
 
         <div class="card">
           <div class="card__icon card__icon--teal" aria-hidden="true">
@@ -140,7 +143,7 @@
           <h3 class="card__title">Solar eclipses, 1901 to 2100</h3>
           <p class="card__body">The longest total eclipse lasted 428 seconds on June 20, 1955. Average: 211.96 seconds.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
-          <a class="card__link" href="analysis.html#dash">See the numbers &rarr;</a>
+          <a class="card__link" href="#numbers">See the numbers &rarr;</a>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </div>
 
@@ -167,20 +170,123 @@
 
       </div>
 
+      
       <p class="features__planned">Planned next: a student performance predictor, a customer churn model and an AI assistant that answers questions about documents.</p>
     </section>
 
+    <section class="analysis" id="numbers" aria-labelledby="numbers-heading">
+      <span class="features__eyebrow">The numbers</span>
+      <h2 class="features__heading" id="numbers-heading">The numbers behind the notebooks.</h2>
+
+      <div class="dash" id="dash">
+        <div class="mockup__chrome" aria-hidden="true">
+          <span class="mockup__dot" style="background:#ff5b57"></span>
+          <span class="mockup__dot" style="background:#ffc531"></span>
+          <span class="mockup__dot" style="background:#12b3a4"></span>
+        </div>
+        <div class="mockup__titlebar">Analysis Dashboard — Kelvin Apau</div>
+
+        <div class="dash__body">
+
+          <!-- Ghana inflation -->
+          <article class="dash__panel" style="--i:0">
+            <div class="dash__row">
+              <h3 class="dash__title">Ghana CPI and inflation</h3>
+              <span class="mockup__pill">Year-on-year</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="54.17" data-decimals="2" data-suffix="%">54.17%</span>
+              <span class="dash__label">peak, December 2022</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Peak, Dec 2022</span><strong>54.17%</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:90.28%;--c:var(--coral)"></div></div>
+            </div>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>2023 average</span><strong>40.28%</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:67.13%;--c:var(--mustard)"></div></div>
+            </div>
+          </article>
+
+          <!-- Global banknotes -->
+          <article class="dash__panel" style="--i:1">
+            <div class="dash__row">
+              <h3 class="dash__title">Global banknotes</h3>
+              <span class="mockup__pill">38 countries</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="241" data-decimals="0">241</span>
+              <span class="dash__label">figures on banknotes</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Men 78.01%</span><span>Women 21.99%</span></div>
+              <div class="dash__bar-track dash__bar-track--split">
+                <div class="dash__fill" style="--w:78.01%;--c:var(--teal)"></div>
+                <div class="dash__fill" style="--w:21.99%;--c:var(--violet)"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Solar eclipses -->
+          <article class="dash__panel" style="--i:2">
+            <div class="dash__row">
+              <h3 class="dash__title">Solar eclipses, 1901 to 2100</h3>
+              <span class="mockup__pill">Totality</span>
+            </div>
+            <p class="dash__metric">
+              <span class="dash__num" data-count="428" data-decimals="0" data-suffix=" s">428 s</span>
+              <span class="dash__label">longest, June 20, 1955</span>
+            </p>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Longest</span><strong>428 s</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:100%;--c:var(--sky)"></div></div>
+            </div>
+            <div class="dash__bar">
+              <div class="dash__bar-head"><span>Average</span><strong>211.96 s</strong></div>
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:49.52%;--c:var(--mustard)"></div></div>
+            </div>
+          </article>
+
+          <!-- Project completion -->
+          <article class="dash__panel" style="--i:3">
+            <div class="dash__row">
+              <h3 class="dash__title">Project completion</h3>
+              <span class="mockup__pill"><span class="dash__num" data-count="4" data-decimals="0">4</span> of 5 done</span>
+            </div>
+            <div class="dash__bar dash__bar--overall">
+              <div class="dash__bar-track"><div class="dash__fill" style="--w:80%;--c:var(--teal)"></div></div>
+            </div>
+            <ul class="dash__checklist">
+              <li class="mockup__check mockup__check--done" style="--k:0"><span class="mockup__checkbox">✓</span>Ghana CPI and inflation</li>
+              <li class="mockup__check mockup__check--done" style="--k:1"><span class="mockup__checkbox">✓</span>NYC Airbnb listings</li>
+              <li class="mockup__check mockup__check--done" style="--k:2"><span class="mockup__checkbox">✓</span>Global banknotes</li>
+              <li class="mockup__check mockup__check--done" style="--k:3"><span class="mockup__checkbox">✓</span>Solar eclipses</li>
+              <li class="mockup__check mockup__check--live" style="--k:4"><span class="mockup__checkbox"></span>SentinelNIDS, in progress</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+
+    </section>
+
     <nav class="pager" aria-label="Page navigation">
-      <a class="btn btn--ghost" href="analysis.html">&larr; Analysis</a>
-      <a class="btn btn--primary" href="about.html">About &rarr;</a>
+      <a class="btn btn--ghost" href="index.html">&larr; Home</a>
+      <a class="btn btn--primary" href="about.html">About Me &rarr;</a>
     </nav>
   </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__inner">
-      <p>© <span id="footer-year">2026</span> Kelvin Kwabena Apau</p>
-      <a href="#top">Back to top</a>
+      <p>&copy; <span id="footer-year">2026</span> Kelvin Kwabena Apau</p>
+      <div class="footer__links">
+        <a href="mailto:kelvinapau00@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/kelvin-apau-a300a73b3">LinkedIn</a>
+        <a href="https://github.com/Michaelson00">GitHub</a>
+        <a href="Kelvin-Apau-CV.pdf" download>CV</a>
+        <a href="#top">Back to top</a>
+      </div>
     </div>
   </footer>
 

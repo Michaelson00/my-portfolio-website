@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact &mdash; Kelvin Apau</title>
-  <meta name="description" content="Get in touch with Kelvin Apau about internships in data and AI.">
+  <title>Experience &mdash; Kelvin Apau</title>
+  <meta name="description" content="Team leader on SentinelNIDS, volunteer with M and F Giving Circle, and lead programmer on the Aggrey Robotics Team.">
   <meta name="theme-color" content="#f5efe2">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
-  <meta property="og:title" content="Contact &mdash; Kelvin Apau">
-  <meta property="og:description" content="Get in touch with Kelvin Apau about internships in data and AI.">
-  <meta property="og:url" content="https://kevap.vercel.app/contact.html">
+  <meta property="og:title" content="Experience &mdash; Kelvin Apau">
+  <meta property="og:description" content="Team leader on SentinelNIDS, volunteer with M and F Giving Circle, and lead programmer on the Aggrey Robotics Team.">
+  <meta property="og:url" content="https://kevap.vercel.app/experience.html">
   <meta property="og:image" content="https://kevap.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -81,11 +81,11 @@
         <a href="projects.html">Projects</a>
         <a href="about.html">About Me</a>
         <a href="skills.html">Skills</a>
-        <a href="experience.html">Experience</a>
+        <a href="experience.html" aria-current="page">Experience</a>
         <a href="awards.html">Awards</a>
-        <a class="nav__contact-link" href="contact.html" aria-current="page">Contact</a>
+        <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
-      <a class="nav__cta" href="contact.html" aria-current="page">Contact</a>
+      <a class="nav__cta" href="contact.html">Contact</a>
       <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -93,27 +93,42 @@
 
   <main id="main" class="page">
 
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="contact__inner">
-      <h2 class="contact__heading" id="contact-heading">Let's connect.</h2>
-      <p class="contact__text">I'm aiming to become an AI engineer and building toward internships in data and AI. If you have a role, or a question about my work, get in touch.</p>
-      <div class="contact__email-row">
-        <a class="contact__email" href="mailto:kelvinapau00@gmail.com">kelvinapau00@gmail.com</a>
-        <button class="btn btn--primary contact__copy" type="button" id="copy-btn">Copy email</button>
+    <section class="timeline" id="experience" aria-labelledby="experience-heading">
+      <span class="features__eyebrow">Experience</span>
+      <h2 class="features__heading" id="experience-heading">Where I have built and led.</h2>
+      <div class="timeline__list" id="timeline-list">
+        <svg class="timeline__svg" aria-hidden="true" focusable="false">
+          <path class="timeline__track" fill="none"/>
+          <path class="timeline__progress" fill="none"/>
+          <circle class="timeline__head" r="8"/>
+        </svg>
+        <div class="timeline__item">
+          <span class="timeline__year">Now</span>
+          <div class="timeline__content">
+            <h3>Team Leader, SentinelNIDS</h3>
+            <p>Leading a four week team project that builds a network intrusion detection system. I handle the machine learning side and help with the data analysis.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__year">2025 to now</span>
+          <div class="timeline__content">
+            <h3>Volunteer, M and F Giving Circle</h3>
+            <p>Design and run digital fundraising campaigns that help pay for the education of children who cannot afford it.</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__year">2022 to 2024</span>
+          <div class="timeline__content">
+            <h3>Lead Programmer, Aggrey Robotics Team</h3>
+            <p>Built DIPCA, an automatic irrigation system using IoT, and OPTIMO, a healthcare delivery system that monitors vital signs. Earned a Certificate of Completion in 2024.</p>
+          </div>
+        </div>
       </div>
-      <p class="contact__status" role="status" id="copy-status"></p>
-      <div class="contact__links">
-        <a class="btn btn--ghost" href="https://linkedin.com/in/kelvin-apau-a300a73b3">LinkedIn</a>
-        <a class="btn btn--ghost" href="https://github.com/Michaelson00">GitHub</a>
-        <a class="btn btn--ghost" href="Kelvin-Apau-CV.pdf" download>Download CV</a>
-      </div>
-    </div>
-  </section>
-
+    </section>
 
     <nav class="pager" aria-label="Page navigation">
-      <a class="btn btn--ghost" href="awards.html">&larr; Awards</a>
-      <a class="btn btn--primary" href="index.html">Back home &rarr;</a>
+      <a class="btn btn--ghost" href="skills.html">&larr; Skills</a>
+      <a class="btn btn--primary" href="awards.html">Awards &rarr;</a>
     </nav>
   </main>
 

@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kelvin Apau — Portfolio</title>
-  <meta name="description" content="Kelvin Kwabena Apau — Data Science, AI and Analytics.">
+  <title>Kelvin Apau &mdash; Data Science and Analytics</title>
+  <meta name="description" content="Portfolio of Kelvin Apau, a Data Science and Analytics student at GCTU in Ghana. Real data analyses, a team security project and robotics work.">
   <meta name="theme-color" content="#f5efe2">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
-  <meta property="og:title" content="Kelvin Apau — Portfolio">
-  <meta property="og:description" content="Kelvin Kwabena Apau — Data Science, AI and Analytics.">
+  <meta property="og:title" content="Kelvin Apau &mdash; Data Science and Analytics">
+  <meta property="og:description" content="Portfolio of Kelvin Apau, a Data Science and Analytics student at GCTU in Ghana. Real data analyses, a team security project and robotics work.">
   <meta property="og:url" content="https://kevap.vercel.app/">
   <meta property="og:image" content="https://kevap.vercel.app/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -67,6 +67,7 @@
     </svg>
   </div>
 
+
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" aria-label="Main">
     <div class="nav__inner">
@@ -77,12 +78,14 @@
         <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
       </div>
       <div class="nav__links" id="nav-links">
-        <a href="analysis.html">Analysis</a>
         <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
+        <a href="about.html">About Me</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="awards.html">Awards</a>
         <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
-      <a class="nav__cta" href="contact.html">Get in touch</a>
+      <a class="nav__cta" href="contact.html">Contact</a>
       <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
@@ -93,21 +96,29 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="top" aria-labelledby="hero-heading">
     <div class="hero__grid">
-
-      <!-- Left column: copy -->
       <div class="hero__copy">
-        <span class="hero__eyebrow">New — Open to internships</span>
+        <span class="hero__eyebrow">Open to internships</span>
         <h1 class="hero__heading" id="hero-heading">
           Data science that <span class="highlight highlight--mustard">actually</span> <span class="highlight highlight--teal">delivers.</span>
         </h1>
-        <p class="hero__lead">I'm a Data Science and Analytics student at GCTU. I take real data, including Ghana's own inflation figures, and work out what it shows.</p>
+        <p class="hero__lead">I'm Kelvin, a Data Science and Analytics student at GCTU in Ghana. I take real data, including Ghana's own inflation figures, and work out what it shows.</p>
         <div class="hero__ctas">
-          <a class="btn btn--primary" href="projects.html">See my projects →</a>
+          <a class="btn btn--primary" href="projects.html">See my projects &rarr;</a>
           <a class="btn btn--ghost" href="Kelvin-Apau-CV.pdf" download>Download CV</a>
+          <a class="btn btn--ghost" href="contact.html">Contact me</a>
         </div>
-        <p class="hero__proof">BSc Data Science, Third Year<br>GCTU, Ghana</p>
+        <p class="hero__proof">BSc Data Science and Analytics, third year<br>Ghana Communication Technology University</p>
       </div>
+    </div>
+  </section>
 
+  <!-- ============ STATS ============ -->
+  <section class="stats" aria-label="At a glance">
+    <div class="stats__grid">
+      <div class="stats__item"><span class="stats__num">4</span><span class="stats__label">Data analyses</span></div>
+      <div class="stats__item"><span class="stats__num">2</span><span class="stats__label">Robotics systems built</span></div>
+      <div class="stats__item"><span class="stats__num">2</span><span class="stats__label">Best Student awards</span></div>
+      <div class="stats__item"><span class="stats__num">Year 3</span><span class="stats__label">BSc Data Science</span></div>
     </div>
   </section>
 
@@ -129,53 +140,136 @@
   </div>
 
 
-    <!-- ---- Explore ---- -->
-    <section class="explore" aria-labelledby="explore-heading">
+
+    <!-- ---- Who I am ---- -->
+    <section class="features who" id="who" aria-labelledby="who-heading">
+      <span class="features__eyebrow">Who I am</span>
+      <h2 class="features__heading" id="who-heading">A data student who likes real, local data.</h2>
+      <div class="who__text">
+        <p>I started in robotics as a lead programmer, building a system that waters crops and one that watches a patient's vital signs. That taught me to care about whether something actually works.</p>
+        <p>Now I study Data Science and Analytics at GCTU and bring the same attitude to data. My favourite project so far uses Ghana's inflation figures, taken straight from the Ghana Statistical Service. I am building toward a career as an AI engineer, so I am learning machine learning and language models next.</p>
+        <div class="who__actions">
+          <a class="btn btn--primary" href="about.html">More about me &rarr;</a>
+          <a class="btn btn--ghost" href="experience.html">My experience</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Skills overview ---- -->
+    <section class="features" id="skills-overview" aria-labelledby="skills-heading">
+      <span class="features__eyebrow">Skills</span>
+      <h2 class="features__heading" id="skills-heading">What I work with.</h2>
+      <div class="features__grid features__grid--four">
+        <div class="card">
+          <div class="card__icon card__icon--coral" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><polyline points="8,24 16,8 24,24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="card__title">Data analysis</h3>
+          <p class="card__body">Cleaning data and finding the story in it.</p>
+          <p class="card__tools">Python, pandas, NumPy, SQL</p>
+          <a class="card__link" href="skills.html#data">See details &rarr;</a>
+          <div class="card__accent card__accent--coral" aria-hidden="true"></div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--teal" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="6" y="18" width="5" height="8" rx="1" fill="#fff"/><rect x="13.5" y="12" width="5" height="14" rx="1" fill="#fff"/><rect x="21" y="8" width="5" height="18" rx="1" fill="#fff"/></svg></div>
+          <h3 class="card__title">Charts</h3>
+          <p class="card__body">Showing results so anyone can read them.</p>
+          <p class="card__tools">Matplotlib, Seaborn</p>
+          <a class="card__link" href="skills.html#charts">See details &rarr;</a>
+          <div class="card__accent card__accent--teal" aria-hidden="true"></div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--violet" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><circle cx="16" cy="16" r="10" fill="none" stroke="#fff" stroke-width="2"/><path d="M16,6 v20 M6,16 h20" stroke="#fff" stroke-width="2"/></svg></div>
+          <h3 class="card__title">Robotics and IoT</h3>
+          <p class="card__body">Lead programmer on two working systems.</p>
+          <p class="card__tools">DIPCA, OPTIMO</p>
+          <a class="card__link" href="skills.html#robotics">See details &rarr;</a>
+          <div class="card__accent card__accent--violet" aria-hidden="true"></div>
+        </div>
+        <div class="card">
+          <div class="card__icon card__icon--coral" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="2" fill="none" stroke="#fff" stroke-width="2"/><line x1="4" y1="12" x2="28" y2="12" stroke="#fff" stroke-width="2"/></svg></div>
+          <h3 class="card__title">Web and tools</h3>
+          <p class="card__body">Version control, and putting sites online.</p>
+          <p class="card__tools">Git, GitHub, Vercel, HTML, CSS</p>
+          <a class="card__link" href="skills.html#web">See details &rarr;</a>
+          <div class="card__accent card__accent--coral" aria-hidden="true"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---- Navigate ---- -->
+    <section class="features" id="navigate" aria-labelledby="navigate-heading">
       <span class="features__eyebrow">Explore</span>
-      <h2 class="features__heading" id="explore-heading">Where to next?</h2>
-      <div class="features__grid explore__grid" id="explore-grid">
-        <!-- Connector line: path data is generated in script.js and drawn on scroll -->
-        <svg class="explore__svg" aria-hidden="true" focusable="false">
-          <path class="explore__track" fill="none"/>
-          <path class="explore__progress" fill="none"/>
-          <circle class="explore__head" r="9"/>
-        </svg>
-        <a class="card explore__card" href="analysis.html">
+      <h2 class="features__heading" id="navigate-heading">Navigate my portfolio.</h2>
+      <div class="features__grid">
+        <a class="card explore__card" href="projects.html">
           <span class="explore__num">01</span>
-          <h3 class="card__title">Analysis</h3>
-          <p class="card__body">The key numbers from my notebooks, on one dashboard.</p>
+          <h3 class="card__title">Projects</h3>
+          <p class="card__body">Four data analyses and a team security project, with the real numbers.</p>
           <span class="explore__go">Open &rarr;</span>
           <div class="card__accent card__accent--coral" aria-hidden="true"></div>
         </a>
-        <a class="card explore__card" href="projects.html">
+        <a class="card explore__card" href="about.html">
           <span class="explore__num">02</span>
-          <h3 class="card__title">Projects</h3>
-          <p class="card__body">Inflation, Airbnb, banknotes, eclipses and SentinelNIDS.</p>
+          <h3 class="card__title">About Me</h3>
+          <p class="card__body">Who I am, how I got here and where I am headed.</p>
           <span class="explore__go">Open &rarr;</span>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </a>
-        <a class="card explore__card" href="about.html">
+        <a class="card explore__card" href="skills.html">
           <span class="explore__num">03</span>
-          <h3 class="card__title">About</h3>
-          <p class="card__body">Skills, the journey from robotics to Data Science, and other work.</p>
+          <h3 class="card__title">Skills</h3>
+          <p class="card__body">The tools I use, and the projects where I used them.</p>
           <span class="explore__go">Open &rarr;</span>
           <div class="card__accent card__accent--violet" aria-hidden="true"></div>
         </a>
-        <a class="card explore__card" href="contact.html">
+        <a class="card explore__card" href="experience.html">
           <span class="explore__num">04</span>
-          <h3 class="card__title">Contact</h3>
-          <p class="card__body">Open to internships in data and AI. Say hello.</p>
+          <h3 class="card__title">Experience</h3>
+          <p class="card__body">Robotics lead, team leader and volunteer.</p>
+          <span class="explore__go">Open &rarr;</span>
+          <div class="card__accent card__accent--coral" aria-hidden="true"></div>
+        </a>
+        <a class="card explore__card" href="awards.html">
+          <span class="explore__num">05</span>
+          <h3 class="card__title">Awards</h3>
+          <p class="card__body">Best Student awards, certificates and courses.</p>
           <span class="explore__go">Open &rarr;</span>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </a>
+        <a class="card explore__card" href="contact.html">
+          <span class="explore__num">06</span>
+          <h3 class="card__title">Contact</h3>
+          <p class="card__body">Open to internships in data and AI. Say hello.</p>
+          <span class="explore__go">Open &rarr;</span>
+          <div class="card__accent card__accent--violet" aria-hidden="true"></div>
+        </a>
       </div>
-    </section>  </main>
+    </section>
+
+    <!-- ---- Closing call ---- -->
+    <section class="ctaband" aria-labelledby="cta-heading">
+      <div class="ctaband__box">
+        <h2 class="ctaband__heading" id="cta-heading">Looking for an intern who works with real data?</h2>
+        <p class="ctaband__text">I am open to internships in data and AI. Send me a message, or have a look at my CV first.</p>
+        <div class="ctaband__actions">
+          <a class="btn btn--primary" href="mailto:kelvinapau00@gmail.com">Email me</a>
+          <a class="btn btn--ghost" href="Kelvin-Apau-CV.pdf" download>Download CV</a>
+          <a class="btn btn--ghost" href="https://linkedin.com/in/kelvin-apau-a300a73b3">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__inner">
-      <p>© <span id="footer-year">2026</span> Kelvin Kwabena Apau</p>
-      <a href="#top">Back to top</a>
+      <p>&copy; <span id="footer-year">2026</span> Kelvin Kwabena Apau</p>
+      <div class="footer__links">
+        <a href="mailto:kelvinapau00@gmail.com">Email</a>
+        <a href="https://linkedin.com/in/kelvin-apau-a300a73b3">LinkedIn</a>
+        <a href="https://github.com/Michaelson00">GitHub</a>
+        <a href="Kelvin-Apau-CV.pdf" download>CV</a>
+        <a href="#top">Back to top</a>
+      </div>
     </div>
   </footer>
 
