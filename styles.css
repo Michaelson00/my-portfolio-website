@@ -980,6 +980,18 @@ img { max-width: 100%; display: block; }
   .stats__item:nth-child(n+3) { border-top: 2px solid var(--line); }
 }
 
+
+/* External links on project cards */
+.card__links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; position: relative; z-index: 1; }
+.card__ext {
+  font-size: 14px; font-weight: 700;
+  padding: 6px 14px;
+  background: var(--bg); color: var(--text);
+  border: 2px solid var(--line); border-radius: 100px;
+  transition: background .15s, color .15s;
+}
+.card__ext:hover { background: var(--mustard); color: var(--ink); }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
