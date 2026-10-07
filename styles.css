@@ -1100,3 +1100,78 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 :root[data-theme="dark"] .hero { background: transparent; }
 :root[data-theme="dark"] .hero__fx { display: none; }
 :root[data-theme="dark"] .hero::after { background: none; }
+
+/* ============================================================
+   GLASS LAYER: frosted, translucent surfaces over the plasma
+   ============================================================ */
+:root {
+  --glass: rgba(255,255,255,.62);
+  --glass-strong: rgba(255,255,255,.8);
+  --glass-border: rgba(17,17,19,.1);
+  --glass-edge: inset 0 1px 0 rgba(255,255,255,.9);
+}
+:root[data-theme="dark"] {
+  --glass: rgba(255,255,255,.055);
+  --glass-strong: rgba(255,255,255,.09);
+  --glass-border: rgba(255,255,255,.14);
+  --glass-edge: inset 0 1px 0 rgba(255,255,255,.14);
+  --surface: rgba(255,255,255,.055);
+  --surface-2: rgba(255,255,255,.09);
+  --line: rgba(255,255,255,.14);
+}
+.card, .dash, .dash__panel, .stats__grid, .ctaband__box, .timeline__content, .mockup, .logostrip,
+.theme-toggle, .btn--ghost, .who__photo, .nav, .contact__card, .award, .course {
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-edge), var(--shadow-sm);
+}
+.nav { background: var(--nav-bg); border-width: 0 0 1px; box-shadow: var(--glass-edge); -webkit-backdrop-filter: blur(22px) saturate(150%); backdrop-filter: blur(22px) saturate(150%); }
+.card:hover { background: var(--glass-strong); border-color: var(--hairline); box-shadow: var(--glass-edge), var(--shadow-lg); }
+.btn--ghost:hover, .theme-toggle:hover { background: var(--glass-strong); }
+.logostrip { border-left: 0; border-right: 0; border-radius: 0; }
+.dash__panel { background: var(--glass); }
+.hero .btn--ghost { background: rgba(255,255,255,.07); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root[data-theme="dark"] { --glass: rgba(24,24,27,.88); --glass-strong: rgba(32,32,36,.92); }
+}
+
+/* ============================================================
+   GLASS LAYER: frosted, see-through surfaces like the hero
+   ============================================================ */
+:root {
+  --glass: rgba(255,255,255,.62);
+  --glass-strong: rgba(255,255,255,.8);
+  --glass-border: rgba(17,17,19,.1);
+  --glass-shine: inset 0 1px 0 rgba(255,255,255,.7);
+}
+:root[data-theme="dark"] {
+  --glass: rgba(255,255,255,.055);
+  --glass-strong: rgba(255,255,255,.09);
+  --glass-border: rgba(255,255,255,.14);
+  --glass-shine: inset 0 1px 0 rgba(255,255,255,.12);
+  --surface: var(--glass);
+}
+.card, .stats__grid, .ctaband__box, .dash, .dash__panel, .timeline__content,
+.theme-toggle, .btn--ghost, .who__photo, .logostrip, .footer {
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+.card, .stats__grid, .ctaband__box, .dash, .dash__panel, .timeline__content, .theme-toggle, .btn--ghost {
+  background: var(--glass); border: 1px solid var(--glass-border); box-shadow: var(--glass-shine), var(--shadow-sm);
+}
+.card:hover { background: var(--glass-strong); border-color: var(--hairline); box-shadow: var(--glass-shine), var(--shadow-lg); }
+.btn--ghost:hover, .theme-toggle:hover { background: var(--glass-strong); }
+.logostrip { background: rgba(0,0,0,.35); border-color: var(--glass-border); }
+:root:not([data-theme="dark"]) .logostrip { background: rgba(17,17,19,.9); }
+.nav { background: var(--nav-bg); -webkit-backdrop-filter: blur(22px) saturate(150%); backdrop-filter: blur(22px) saturate(150%); }
+.footer { background: transparent; border-top: 1px solid var(--glass-border); }
+.hero__eyebrow { box-shadow: var(--glass-shine); }
+/* Keep the inner dashboard rows readable on glass */
+.dash__panel { background: var(--glass-strong); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root[data-theme="dark"] { --glass: rgba(24,24,27,.88); --glass-strong: rgba(32,32,36,.92); }
+}
+:root[data-theme="dark"] .nav { background: rgba(8,8,9,.86); }
+:root:not([data-theme="dark"]) .nav { background: rgba(247,247,245,.9); }
