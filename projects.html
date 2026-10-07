@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects &mdash; Kelvin Apau</title>
   <meta name="description" content="Data analyses on Ghana inflation, NYC Airbnb, global banknotes and solar eclipses, plus a team intrusion detection project.">
-  <meta name="theme-color" content="#0b0b0c">
+  <meta name="theme-color" content="#060607">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
   <meta property="og:title" content="Projects &mdash; Kelvin Apau">
@@ -24,19 +24,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script>
-    /* Dark by default. Light only if the visitor chose it with the button. Set before paint so there is no flash. */
-    (function () {
-      var t = 'dark';
-      try {
-        var saved = localStorage.getItem('theme');
-        if (saved === 'light') t = 'light';
-      } catch (e) {}
-      document.documentElement.setAttribute('data-theme', t);
-      var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', t === 'dark' ? '#0b0b0c' : '#f7f7f5');
-    })();
-  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top" class="subpage">
@@ -48,8 +35,7 @@
   <nav class="nav" aria-label="Main">
     <div class="nav__inner">
       <div class="nav__brand">
-        <div class="nav__logo" aria-hidden="true">
-          <svg viewBox="0 0 28 28" width="28" height="28"><path d="M6,14 C10,6 14,22 18,14 C22,6 24,18 26,14" fill="none" stroke="#17140d" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="nav__logo" aria-hidden="true"><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
         </div>
         <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
       </div>
@@ -62,7 +48,6 @@
         <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
       <a class="nav__cta" href="contact.html">Contact</a>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -76,9 +61,7 @@
       <div class="features__grid">
 
         <div class="card">
-          <div class="card__icon card__icon--coral" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="4" y="14" width="24" height="14" rx="2" fill="none" stroke="#fff" stroke-width="2"/><polyline points="4,14 16,4 28,14" fill="none" stroke="#fff" stroke-width="2"/></svg>
-          </div>
+          <div class="card__icon card__icon--coral" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6" /> <path d="m22 7-8.5 8.5-5-5L2 17" /></svg></div>
           <h3 class="card__title">Ghana CPI and inflation</h3>
           <p class="card__body">Year-on-year inflation peaked at 54.17% in December 2022 and averaged 40.28% across 2023.</p>
           <p class="card__tools">Python, pandas, NumPy, Matplotlib</p>
@@ -88,9 +71,7 @@
         </div>
 
         <div class="card">
-          <div class="card__icon card__icon--teal" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="16" r="12" fill="none" stroke="#fff" stroke-width="2"/><path d="M10,20 L14,12 L18,18 L22,10" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-          </div>
+          <div class="card__icon card__icon--teal" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" /> <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /></svg></div>
           <h3 class="card__title">NYC Airbnb listings</h3>
           <p class="card__body">Very little price difference between room types and boroughs, and almost no link between price and reviews.</p>
           <p class="card__tools">Python, pandas, Seaborn, Matplotlib</p>
@@ -99,9 +80,7 @@
         </div>
 
         <div class="card">
-          <div class="card__icon card__icon--violet" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="6" y="6" width="20" height="20" rx="3" fill="none" stroke="#fff" stroke-width="2"/><line x1="6" y1="16" x2="26" y2="16" stroke="#fff" stroke-width="2"/><line x1="16" y1="6" x2="16" y2="26" stroke="#fff" stroke-width="2"/></svg>
-          </div>
+          <div class="card__icon card__icon--violet" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2" /> <circle cx="12" cy="12" r="2" /> <path d="M6 12h.01M18 12h.01" /></svg></div>
           <h3 class="card__title">Global banknotes</h3>
           <p class="card__body">Across 241 figures from 38 countries, 78.01% are men and 21.99% are women.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
@@ -116,9 +95,7 @@
       <div class="features__grid">
 
         <div class="card">
-          <div class="card__icon card__icon--teal" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><circle cx="16" cy="12" r="8" fill="none" stroke="#fff" stroke-width="2"/><path d="M8,28 C8,22 24,22 24,28" fill="none" stroke="#fff" stroke-width="2"/></svg>
-          </div>
+          <div class="card__icon card__icon--teal" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M12 2a7 7 0 1 0 10 10" /></svg></div>
           <h3 class="card__title">Solar eclipses, 1901 to 2100</h3>
           <p class="card__body">The longest total eclipse lasted 428 seconds on June 20, 1955. Average: 211.96 seconds.</p>
           <p class="card__tools">Python, pandas, Matplotlib</p>
@@ -128,9 +105,7 @@
         </div>
 
         <div class="card">
-          <div class="card__icon card__icon--coral" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><path d="M6,26 L16,6 L26,26 Z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="card__icon card__icon--coral" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M13.4 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7.4" /> <path d="M2 6h4" /> <path d="M2 10h4" /> <path d="M2 14h4" /> <path d="M2 18h4" /> <path d="M21.378 5.626a1 1 0 1 0-3.004-3.004l-5.01 5.012a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506z" /></svg></div>
           <h3 class="card__title">Islands and jeans pockets</h3>
           <p class="card__body">Two shorter exploratory notebooks, practising data cleaning and asking clear questions.</p>
           <p class="card__tools">Python, Jupyter Notebook</p>
@@ -139,9 +114,7 @@
         </div>
 
         <div class="card">
-          <div class="card__icon card__icon--violet" aria-hidden="true">
-            <svg viewBox="0 0 32 32" width="32" height="32"><rect x="4" y="4" width="24" height="24" rx="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="16" cy="16" r="6" fill="none" stroke="#fff" stroke-width="2"/></svg>
-          </div>
+          <div class="card__icon card__icon--violet" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" /> <path d="m9 12 2 2 4-4" /></svg></div>
           <h3 class="card__title">SentinelNIDS</h3>
           <p class="card__body">Leading a team building network intrusion detection with ML on public datasets and captured traffic.</p>
           <p class="card__tools">ML, intrusion detection</p>
@@ -159,94 +132,109 @@
       <span class="features__eyebrow">The numbers</span>
       <h2 class="features__heading" id="numbers-heading">The numbers behind the notebooks.</h2>
 
-      <div class="dash" id="dash">
-        <div class="mockup__chrome" aria-hidden="true">
-          <span class="mockup__dot" style="background:#ff5b57"></span>
-          <span class="mockup__dot" style="background:#ffc531"></span>
-          <span class="mockup__dot" style="background:#12b3a4"></span>
+      <div class="dv" id="dv">
+
+        <!-- Headline numbers -->
+        <div class="dv__kpis">
+          <div class="dv__kpi"><span class="dv__kpinum"><span data-count="54.17" data-decimals="2" data-suffix="%">54.17%</span></span><span class="dv__kpilabel">Ghana inflation peak, Dec 2022</span></div>
+          <div class="dv__kpi"><span class="dv__kpinum"><span data-count="241" data-decimals="0">241</span></span><span class="dv__kpilabel">Figures on banknotes, 38 countries</span></div>
+          <div class="dv__kpi"><span class="dv__kpinum"><span data-count="428" data-decimals="0" data-suffix=" s">428 s</span></span><span class="dv__kpilabel">Longest total eclipse, 1955</span></div>
+          <div class="dv__kpi"><span class="dv__kpinum"><span data-count="4" data-decimals="0">4</span><small> of 5</small></span><span class="dv__kpilabel">Analyses finished</span></div>
         </div>
-        <div class="mockup__titlebar">Analysis Dashboard — Kelvin Apau</div>
 
-        <div class="dash__body">
+        <div class="dv__grid">
 
-          <!-- Ghana inflation -->
-          <article class="dash__panel" style="--i:0">
-            <div class="dash__row">
-              <h3 class="dash__title">Ghana CPI and inflation</h3>
-              <span class="mockup__pill">Year-on-year</span>
-            </div>
-            <p class="dash__metric">
-              <span class="dash__num" data-count="54.17" data-decimals="2" data-suffix="%">54.17%</span>
-              <span class="dash__label">peak, December 2022</span>
-            </p>
-            <div class="dash__bar">
-              <div class="dash__bar-head"><span>Peak, Dec 2022</span><strong>54.17%</strong></div>
-              <div class="dash__bar-track"><div class="dash__fill" style="--w:90.28%;--c:var(--coral)"></div></div>
-            </div>
-            <div class="dash__bar">
-              <div class="dash__bar-head"><span>2023 average</span><strong>40.28%</strong></div>
-              <div class="dash__bar-track"><div class="dash__fill" style="--w:67.13%;--c:var(--mustard)"></div></div>
+          <!-- Dumbbell: Ghana inflation -->
+          <article class="dv__panel dv__panel--wide">
+            <header class="dv__head"><h3>Ghana inflation, peak to 2023 average</h3><span class="dv__chip">&minus;13.89 points</span></header>
+            <p class="dv__sub">Year-on-year inflation, per cent (axis starts at 30)</p>
+            <svg class="dv__svg" viewBox="0 0 640 160" role="img" aria-label="Dumbbell chart. Inflation peaked at 54.17 per cent in December 2022 and averaged 40.28 per cent across 2023.">
+              <g class="dv__grid-lines">
+                <line x1="40" x2="600" y1="120" y2="120"/>
+                <g class="dv__ticks"><line x1="40" x2="40" y1="70" y2="120"/><line x1="226.7" x2="226.7" y1="70" y2="120"/><line x1="413.3" x2="413.3" y1="70" y2="120"/><line x1="600" x2="600" y1="70" y2="120"/></g>
+              </g>
+              <g class="dv__axis"><text x="40" y="144" text-anchor="middle">30</text><text x="226.7" y="144" text-anchor="middle">40</text><text x="413.3" y="144" text-anchor="middle">50</text><text x="600" y="144" text-anchor="middle">60%</text></g>
+              <line class="dv__stem" x1="231.9" x2="491.2" y1="95" y2="95"/>
+              <g class="dv__dot dv__dot--mute" tabindex="0" data-tip="2023 average: 40.28%"><circle cx="231.9" cy="95" r="11"/><text class="dv__dotname" x="231.9" y="28" text-anchor="middle">2023 average</text><text x="231.9" y="56" text-anchor="middle">40.28%</text></g>
+              <g class="dv__dot" tabindex="0" data-tip="Peak, December 2022: 54.17%"><circle cx="491.2" cy="95" r="11"/><text class="dv__dotname" x="491.2" y="28" text-anchor="middle">Peak, Dec 2022</text><text x="491.2" y="56" text-anchor="middle">54.17%</text></g>
+            </svg>
+          </article>
+
+          <!-- Donut: banknotes -->
+          <article class="dv__panel">
+            <header class="dv__head"><h3>Who is on the banknotes</h3></header>
+            <p class="dv__sub">241 figures from 38 countries</p>
+            <div class="dv__donutwrap">
+              <svg class="dv__donut" viewBox="0 0 180 180" role="img" aria-label="Donut chart. 78.01 per cent of figures are men, 21.99 per cent are women.">
+                <circle class="dv__ring" cx="90" cy="90" r="70"/>
+                <circle class="dv__arc dv__arc--men" cx="90" cy="90" r="70" pathLength="100" stroke-dasharray="77.01 100" stroke-dashoffset="-0.5" transform="rotate(-90 90 90)" tabindex="0" data-tip="Men: 188 figures, 78.01%"/>
+                <circle class="dv__arc dv__arc--women" cx="90" cy="90" r="70" pathLength="100" stroke-dasharray="20.99 100" stroke-dashoffset="-78.51" transform="rotate(-90 90 90)" tabindex="0" data-tip="Women: 53 figures, 21.99%"/>
+                <text class="dv__donutnum" x="90" y="92" text-anchor="middle">22%</text>
+                <text class="dv__donutsub" x="90" y="110" text-anchor="middle">women</text>
+              </svg>
+              <ul class="dv__legend"><li><i class="dv__sw dv__sw--men"></i>Men <b>188</b><span>78.01%</span></li><li><i class="dv__sw dv__sw--women"></i>Women <b>53</b><span>21.99%</span></li></ul>
             </div>
           </article>
 
-          <!-- Global banknotes -->
-          <article class="dash__panel" style="--i:1">
-            <div class="dash__row">
-              <h3 class="dash__title">Global banknotes</h3>
-              <span class="mockup__pill">38 countries</span>
-            </div>
-            <p class="dash__metric">
-              <span class="dash__num" data-count="241" data-decimals="0">241</span>
-              <span class="dash__label">figures on banknotes</span>
-            </p>
-            <div class="dash__bar">
-              <div class="dash__bar-head"><span>Men 78.01%</span><span>Women 21.99%</span></div>
-              <div class="dash__bar-track dash__bar-track--split">
-                <div class="dash__fill" style="--w:78.01%;--c:var(--teal)"></div>
-                <div class="dash__fill" style="--w:21.99%;--c:var(--violet)"></div>
-              </div>
-            </div>
+          <!-- Gauge: eclipses -->
+          <article class="dv__panel">
+            <header class="dv__head"><h3>Solar eclipses, 1901 to 2100</h3></header>
+            <p class="dv__sub">Length of totality, in seconds</p>
+            <svg class="dv__gauge" viewBox="0 0 220 150" role="img" aria-label="Gauge. The average totality is 211.96 seconds, about half of the longest at 428 seconds.">
+              <path class="dv__gtrack" d="M 20 115 A 90 90 0 0 1 200 115" pathLength="100"/>
+              <path class="dv__gfill" d="M 20 115 A 90 90 0 0 1 200 115" pathLength="100" stroke-dasharray="49.52 100" tabindex="0" data-tip="Average: 211.96 s, 49.5% of the longest"/>
+              <text class="dv__gnum" x="110" y="104" text-anchor="middle">211.96 s</text>
+              <text class="dv__gsub" x="110" y="124" text-anchor="middle">average</text>
+              <text class="dv__gend" x="20" y="140" text-anchor="middle">0</text>
+              <text class="dv__gend" x="200" y="140" text-anchor="middle">428 s</text>
+            </svg>
+            <p class="dv__note">Longest: 428 s, June 20, 1955</p>
           </article>
 
-          <!-- Solar eclipses -->
-          <article class="dash__panel" style="--i:2">
-            <div class="dash__row">
-              <h3 class="dash__title">Solar eclipses, 1901 to 2100</h3>
-              <span class="mockup__pill">Totality</span>
-            </div>
-            <p class="dash__metric">
-              <span class="dash__num" data-count="428" data-decimals="0" data-suffix=" s">428 s</span>
-              <span class="dash__label">longest, June 20, 1955</span>
-            </p>
-            <div class="dash__bar">
-              <div class="dash__bar-head"><span>Longest</span><strong>428 s</strong></div>
-              <div class="dash__bar-track"><div class="dash__fill" style="--w:100%;--c:var(--sky)"></div></div>
-            </div>
-            <div class="dash__bar">
-              <div class="dash__bar-head"><span>Average</span><strong>211.96 s</strong></div>
-              <div class="dash__bar-track"><div class="dash__fill" style="--w:49.52%;--c:var(--mustard)"></div></div>
-            </div>
-          </article>
-
-          <!-- Project completion -->
-          <article class="dash__panel" style="--i:3">
-            <div class="dash__row">
-              <h3 class="dash__title">Project completion</h3>
-              <span class="mockup__pill"><span class="dash__num" data-count="4" data-decimals="0">4</span> of 5 done</span>
-            </div>
-            <div class="dash__bar dash__bar--overall">
-              <div class="dash__bar-track"><div class="dash__fill" style="--w:80%;--c:var(--teal)"></div></div>
-            </div>
-            <ul class="dash__checklist">
-              <li class="mockup__check mockup__check--done" style="--k:0"><span class="mockup__checkbox">✓</span>Ghana CPI and inflation</li>
-              <li class="mockup__check mockup__check--done" style="--k:1"><span class="mockup__checkbox">✓</span>NYC Airbnb listings</li>
-              <li class="mockup__check mockup__check--done" style="--k:2"><span class="mockup__checkbox">✓</span>Global banknotes</li>
-              <li class="mockup__check mockup__check--done" style="--k:3"><span class="mockup__checkbox">✓</span>Solar eclipses</li>
-              <li class="mockup__check mockup__check--live" style="--k:4"><span class="mockup__checkbox"></span>SentinelNIDS, in progress</li>
+          <!-- Bars: tools -->
+          <article class="dv__panel">
+            <header class="dv__head"><h3>Tools across my analyses</h3></header>
+            <p class="dv__sub">Number of the 5 analyses using each</p>
+            <ul class="dv__bars">
+              <li tabindex="0" data-tip="Python: 5 of 5"><span>Python</span><div><i style="--w:100%" class="hi"></i></div><b>5</b></li>
+              <li tabindex="0" data-tip="pandas: 4 of 5"><span>pandas</span><div><i style="--w:80%" class="hi"></i></div><b>4</b></li>
+              <li tabindex="0" data-tip="Matplotlib: 4 of 5"><span>Matplotlib</span><div><i style="--w:80%" class="hi"></i></div><b>4</b></li>
+              <li tabindex="0" data-tip="NumPy: 1 of 5"><span>NumPy</span><div><i style="--w:20%"></i></div><b>1</b></li>
+              <li tabindex="0" data-tip="Seaborn: 1 of 5"><span>Seaborn</span><div><i style="--w:20%"></i></div><b>1</b></li>
+              <li tabindex="0" data-tip="Jupyter: 1 of 5"><span>Jupyter</span><div><i style="--w:20%"></i></div><b>1</b></li>
             </ul>
           </article>
 
+          <!-- Stepper: completion -->
+          <article class="dv__panel">
+            <header class="dv__head"><h3>Project completion</h3><span class="dv__chip">80%</span></header>
+            <p class="dv__sub">4 of 5 analyses and projects done</p>
+            <ol class="dv__steps">
+              <li class="is-done"><span class="dv__node">&#10003;</span><em>Ghana CPI and inflation</em></li>
+              <li class="is-done"><span class="dv__node">&#10003;</span><em>NYC Airbnb listings</em></li>
+              <li class="is-done"><span class="dv__node">&#10003;</span><em>Global banknotes</em></li>
+              <li class="is-done"><span class="dv__node">&#10003;</span><em>Solar eclipses</em></li>
+              <li class="is-live"><span class="dv__node"></span><em>SentinelNIDS, in progress</em></li>
+            </ol>
+          </article>
+
         </div>
+
+        <details class="dv__table">
+          <summary>View the numbers as a table</summary>
+          <table>
+            <thead><tr><th>Analysis</th><th>Measure</th><th>Value</th></tr></thead>
+            <tbody>
+              <tr><td>Ghana CPI and inflation</td><td>Peak year-on-year, Dec 2022</td><td>54.17%</td></tr>
+              <tr><td>Ghana CPI and inflation</td><td>2023 average</td><td>40.28%</td></tr>
+              <tr><td>Global banknotes</td><td>Men / women, of 241 figures</td><td>78.01% / 21.99%</td></tr>
+              <tr><td>Solar eclipses</td><td>Longest / average totality</td><td>428 s / 211.96 s</td></tr>
+              <tr><td>Tools</td><td>Python, pandas, Matplotlib, NumPy, Seaborn, Jupyter</td><td>5, 4, 4, 1, 1, 1 of 5</td></tr>
+            </tbody>
+          </table>
+        </details>
+
+        <div class="dv__tip" id="dv-tip" role="status" hidden></div>
       </div>
 
     </section>
@@ -272,6 +260,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="dash.js"></script>
   <script src="fx.js"></script>
 </body>
 </html>

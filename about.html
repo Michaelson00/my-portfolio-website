@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Me &mdash; Kelvin Apau</title>
   <meta name="description" content="Kelvin Apau, a Data Science and Analytics student at GCTU. From robotics at senior high school to real data analysis, aiming to become an AI engineer.">
-  <meta name="theme-color" content="#0b0b0c">
+  <meta name="theme-color" content="#060607">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
   <meta property="og:title" content="About Me &mdash; Kelvin Apau">
@@ -24,19 +24,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script>
-    /* Dark by default. Light only if the visitor chose it with the button. Set before paint so there is no flash. */
-    (function () {
-      var t = 'dark';
-      try {
-        var saved = localStorage.getItem('theme');
-        if (saved === 'light') t = 'light';
-      } catch (e) {}
-      document.documentElement.setAttribute('data-theme', t);
-      var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', t === 'dark' ? '#0b0b0c' : '#f7f7f5');
-    })();
-  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top" class="subpage">
@@ -48,8 +35,7 @@
   <nav class="nav" aria-label="Main">
     <div class="nav__inner">
       <div class="nav__brand">
-        <div class="nav__logo" aria-hidden="true">
-          <svg viewBox="0 0 28 28" width="28" height="28"><path d="M6,14 C10,6 14,22 18,14 C22,6 24,18 26,14" fill="none" stroke="#17140d" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="nav__logo" aria-hidden="true"><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
         </div>
         <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
       </div>
@@ -62,7 +48,6 @@
         <a class="nav__contact-link" href="contact.html">Contact</a>
       </div>
       <a class="nav__cta" href="contact.html">Contact</a>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
@@ -83,44 +68,43 @@
       </div>
     </section>
 
-    <section class="timeline" id="timeline" aria-labelledby="timeline-heading">
+    <section class="journey" id="timeline" aria-labelledby="timeline-heading">
       <span class="features__eyebrow">Journey</span>
       <h2 class="features__heading" id="timeline-heading">The journey so far.</h2>
-      <div class="timeline__list" id="timeline-list">
-        <svg class="timeline__svg" aria-hidden="true" focusable="false">
-          <path class="timeline__track" fill="none"/>
-          <path class="timeline__progress" fill="none"/>
-          <circle class="timeline__head" r="8"/>
-        </svg>
-        <div class="timeline__item">
-          <span class="timeline__year">2022</span>
-          <div class="timeline__content">
+      <ol class="journey__list">
+        <li class="journey__item">
+          <span class="journey__node" aria-hidden="true"><svg class="ico" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8" /> <rect width="16" height="12" x="4" y="8" rx="2" /> <path d="M2 14h2" /> <path d="M20 14h2" /> <path d="M15 13v2" /> <path d="M9 13v2" /></svg></span>
+          <article class="journey__card">
+            <span class="journey__year">2022</span>
             <h3>Senior high school and robotics</h3>
             <p>Started General Science at Aggrey Memorial A.M.E. Zion Senior High School and joined the robotics team.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__year">2024</span>
-          <div class="timeline__content">
+          </article>
+        </li>
+        <li class="journey__item">
+          <span class="journey__node" aria-hidden="true"><svg class="ico" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg></span>
+          <article class="journey__card">
+            <span class="journey__year">2024</span>
             <h3>Finished senior high school</h3>
             <p>Completed WASSCE and the robotics team programme.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__year">2025</span>
-          <div class="timeline__content">
+          </article>
+        </li>
+        <li class="journey__item">
+          <span class="journey__node" aria-hidden="true"><svg class="ico" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 21v-3a2 2 0 0 0-4 0v3" /> <path d="M18 4.933V21" /> <path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6" /> <path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11" /> <path d="M6 4.933V21" /> <circle cx="12" cy="9" r="2" /></svg></span>
+          <article class="journey__card">
+            <span class="journey__year">2025</span>
             <h3>Started at GCTU</h3>
             <p>Began the BSc in Data Science and Analytics, and started practising Python and C++.</p>
-          </div>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__year">2026</span>
-          <div class="timeline__content">
+          </article>
+        </li>
+        <li class="journey__item">
+          <span class="journey__node" aria-hidden="true"><svg class="ico" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" /> <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" /> <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" /> <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" /></svg></span>
+          <article class="journey__card">
+            <span class="journey__year">2026</span>
             <h3>Third year</h3>
             <p>Working on data analyses, leading the SentinelNIDS team and learning machine learning.</p>
-          </div>
-        </div>
-      </div>
+          </article>
+        </li>
+      </ol>
     </section>
 
     <section class="background" id="more" aria-labelledby="more-heading">
@@ -128,13 +112,13 @@
       <h2 class="features__heading" id="more-heading">Languages and goals.</h2>
       <div class="features__grid features__grid--two">
         <div class="card">
-          <div class="card__icon card__icon--teal" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M5,7 h22 v14 h-12 l-6,5 v-5 h-4 z" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="card__icon card__icon--teal" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6" /> <path d="m4 14 6-6 2-3" /> <path d="M2 5h12" /> <path d="M7 2h1" /> <path d="m22 22-5-10-5 10" /> <path d="M14 18h6" /></svg></div>
           <h3 class="card__title">Languages</h3>
           <p class="card__body">English, French and Twi.</p>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </div>
         <div class="card">
-          <div class="card__icon card__icon--violet" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><polygon points="16,4 19.5,12 28,13 21.5,19 23.5,28 16,23.5 8.5,28 10.5,19 4,13 12.5,12" fill="none" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div>
+          <div class="card__icon card__icon--violet" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <circle cx="12" cy="12" r="6" /> <circle cx="12" cy="12" r="2" /></svg></div>
           <h3 class="card__title">Working toward</h3>
           <p class="card__body">Becoming an AI engineer. I am building skills in Python, machine learning, language models and MLOps, and learning by building real projects.</p>
           <div class="card__accent card__accent--violet" aria-hidden="true"></div>
@@ -147,13 +131,13 @@
       <h2 class="features__heading" id="work-heading">Websites and practice.</h2>
       <div class="features__grid features__grid--two">
         <div class="card">
-          <div class="card__icon card__icon--teal" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><rect x="4" y="8" width="24" height="16" rx="2" fill="none" stroke="#fff" stroke-width="2"/><line x1="4" y1="12" x2="28" y2="12" stroke="#fff" stroke-width="2"/></svg></div>
+          <div class="card__icon card__icon--teal" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /> <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" /> <path d="M2 12h20" /></svg></div>
           <h3 class="card__title">Websites</h3>
           <p class="card__body">This portfolio, and <a href='https://sandy-birthday.vercel.app'>Sandy's Birthday Wish</a>, both hosted on Vercel.</p>
           <div class="card__accent card__accent--teal" aria-hidden="true"></div>
         </div>
         <div class="card">
-          <div class="card__icon card__icon--violet" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><polyline points="8,24 16,8 24,24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div class="card__icon card__icon--violet" aria-hidden="true"><svg class="ico" width="28" height="28" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7 11 2-2-2-2" /> <path d="M11 13h4" /> <rect width="18" height="18" x="3" y="3" rx="2" ry="2" /></svg></div>
           <h3 class="card__title">Practice programs</h3>
           <p class="card__body">Calculator, hangman, rock paper scissors, BMI calculator and password generator in Python, plus recursive Fibonacci and circle area in C++. <a href="https://github.com/Michaelson00/python" target="_blank" rel="noopener">Python on GitHub</a> and <a href="https://github.com/Michaelson00/cpp-practice" target="_blank" rel="noopener">C++ on GitHub</a>.</p>
           <div class="card__accent card__accent--violet" aria-hidden="true"></div>

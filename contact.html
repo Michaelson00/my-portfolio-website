@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact &mdash; Kelvin Apau</title>
   <meta name="description" content="Get in touch with Kelvin Apau about internships in data and AI.">
-  <meta name="theme-color" content="#0b0b0c">
+  <meta name="theme-color" content="#060607">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
   <meta property="og:title" content="Contact &mdash; Kelvin Apau">
@@ -24,19 +24,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <script>
-    /* Dark by default. Light only if the visitor chose it with the button. Set before paint so there is no flash. */
-    (function () {
-      var t = 'dark';
-      try {
-        var saved = localStorage.getItem('theme');
-        if (saved === 'light') t = 'light';
-      } catch (e) {}
-      document.documentElement.setAttribute('data-theme', t);
-      var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', t === 'dark' ? '#0b0b0c' : '#f7f7f5');
-    })();
-  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top" class="subpage">
@@ -48,8 +35,7 @@
   <nav class="nav" aria-label="Main">
     <div class="nav__inner">
       <div class="nav__brand">
-        <div class="nav__logo" aria-hidden="true">
-          <svg viewBox="0 0 28 28" width="28" height="28"><path d="M6,14 C10,6 14,22 18,14 C22,6 24,18 26,14" fill="none" stroke="#17140d" stroke-width="3" stroke-linecap="round"/></svg>
+        <div class="nav__logo" aria-hidden="true"><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2" /></svg>
         </div>
         <a class="nav__wordmark" href="index.html">Kelvin Apau</a>
       </div>
@@ -62,7 +48,6 @@
         <a class="nav__contact-link" href="contact.html" aria-current="page">Contact</a>
       </div>
       <a class="nav__cta" href="contact.html" aria-current="page">Contact</a>
-      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.2A8.5 8.5 0 1 1 9.8 4a6.8 6.8 0 0 0 10.2 10.2z" fill="#ffc531" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg><svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.5" fill="#ffc531" stroke="currentColor" stroke-width="2.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3l1.7 1.7M17 17l1.7 1.7M5.3 18.7L7 17M17 7l1.7-1.7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
