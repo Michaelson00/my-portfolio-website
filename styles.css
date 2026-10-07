@@ -1049,3 +1049,11 @@ img { max-width: 100%; display: block; }
   .timeline__list.is-drawn .timeline__item::before,
   .timeline__list.is-drawn .timeline__content { transition: none; }
 }
+
+.who__grid { display: grid; grid-template-columns: 340px 1fr; gap: 40px; align-items: center; }
+.who__photo { margin: 0; border: 3px solid var(--line); border-radius: 20px; box-shadow: var(--shadow-lg); overflow: hidden; background: #eef6ff; }
+.who__photo img { display: block; width: 100%; height: auto; }
+@media (max-width: 760px) {
+  .who__grid { grid-template-columns: 1fr; gap: 28px; }
+  .who__photo { max-width: 340px; }
+}
