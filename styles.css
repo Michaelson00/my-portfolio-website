@@ -1,7 +1,7 @@
 /* ============================================================
-   MEMPHIS / POSTMODERN PORTFOLIO — Kelvin Apau
-   Warm cream canvas, thick black outlines, hard offset shadows,
-   animated geometric confetti, flat saturated Memphis palette.
+   PORTFOLIO — Kelvin Apau
+   Calm dark-first theme: near black canvas, thin borders, soft
+   shadows, one orange accent, plasma and bars motion in the heroes.
    ============================================================ */
 
 /* ---- Reset ---- */
@@ -9,52 +9,59 @@
 
 /* ---- Palette ---- */
 :root {
-  --cream: #f5efe2;
-  --ink: #17140d;
-  --teal: #12b3a4;
-  --coral: #ff5b57;
-  --coral-text: #c42a26; /* darker coral for small text, passes 4.5:1 */
-  --teal-text: #087067;  /* darker teal for small text, passes 4.5:1 */
-  --mustard: #ffc531;
-  --violet: #6b5be6;
-  --sky: #3aa0ff;
-  --muted: #4d493f; /* darker grey for secondary text, 7.8:1 on cream */
-  /* Theme tokens: light values here, dark values in the block below */
-  --bg: #f5efe2;
-  --surface: #fff;
-  --text: #17140d;
-  --line: #17140d;
-  --nav-bg: rgba(245,239,226,.88);
-  --hairline: rgba(23,20,13,.15);
-  --hairline-soft: rgba(23,20,13,.1);
-  --strip-bg: #17140d;
-  --strip-text: #f5efe2;
-  --focus: #6b5be6;
-  --outline: 3px solid var(--line);
-  --shadow-lg: 8px 8px 0 var(--line);
-  --shadow-sm: 5px 5px 0 var(--line);
-  --shadow-press: 3px 3px 0 var(--line);
+  /* Legacy names now map onto one calm accent so older rules stay consistent */
+  --accent: #c2410c;
+  --accent-text: #b13a08;
+  --ink: #0b0b0c;
+  --cream: #f7f7f5;
+  --coral: var(--accent);
+  --teal: var(--accent);
+  --mustard: var(--accent);
+  --violet: var(--accent);
+  --sky: var(--accent);
+  --coral-text: var(--accent-text);
+  --teal-text: var(--accent-text);
+  --muted: #4b4b52;
+  --bg: #f7f7f5;
+  --surface: #ffffff;
+  --surface-2: #efefec;
+  --text: #111113;
+  --line: #d4d4cf;
+  --nav-bg: rgba(247,247,245,.82);
+  --hairline: rgba(17,17,19,.14);
+  --hairline-soft: rgba(17,17,19,.08);
+  --strip-bg: #111113;
+  --strip-text: #f2f2f0;
+  --focus: #c2410c;
+  --outline: 1px solid var(--line);
+  --shadow-lg: 0 18px 40px -24px rgba(17,17,19,.35);
+  --shadow-sm: 0 8px 22px -14px rgba(17,17,19,.3);
+  --shadow-press: 0 4px 14px -10px rgba(17,17,19,.3);
   color-scheme: light;
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
-  --radius: 22px;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --radius: 14px;
 }
 
-/* ---- Dark theme (set on <html data-theme="dark"> by the toggle) ---- */
+/* ---- Dark theme (the default; set on <html data-theme="dark">) ---- */
 :root[data-theme="dark"] {
-  --bg: #15130e;
-  --surface: #211d15;
-  --text: #f5efe2;
-  --line: #f5efe2;
-  --muted: #cdc6b3;
-  --coral-text: #ff8c87;
-  --teal-text: #3fd9c9;
-  --nav-bg: rgba(21,19,14,.88);
-  --hairline: rgba(245,239,226,.18);
-  --hairline-soft: rgba(245,239,226,.12);
-  --strip-bg: #0c0b08;
-  --strip-text: #f5efe2;
-  --focus: #a99eff;
+  --accent: #ff6a2b;
+  --accent-text: #ff8a55;
+  --muted: #b4b4bb;
+  --bg: #0b0b0c;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
+  --text: #f2f2f0;
+  --line: #2a2a2e;
+  --nav-bg: rgba(11,11,12,.78);
+  --hairline: rgba(242,242,240,.16);
+  --hairline-soft: rgba(242,242,240,.09);
+  --strip-bg: #050506;
+  --strip-text: #f2f2f0;
+  --focus: #ff8a55;
+  --shadow-lg: 0 24px 50px -28px rgba(0,0,0,.9);
+  --shadow-sm: 0 10px 26px -16px rgba(0,0,0,.9);
+  --shadow-press: 0 4px 14px -10px rgba(0,0,0,.9);
   color-scheme: dark;
 }
 
@@ -82,40 +89,6 @@ img { max-width: 100%; display: block; }
 
 /* ---- Utility ---- */
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
-
-/* ============================================================
-   ANIMATED MEMPHIS CONFETTI
-   ============================================================ */
-.confetti {
-  position: fixed; inset: 0; z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.confetti__shape {
-  position: absolute;
-  will-change: transform;
-}
-.confetti [stroke="#17140d"] { stroke: var(--line); }
-
-/* Positions (four shapes only, kept to the edges away from the text) */
-.confetti__triangle  { top: 8%;  left: 4%;  }
-.confetti__arc       { top: 18%; right: 6%; }
-.confetti__plus      { top: 50%; left: 3%;  }
-.confetti__half      { top: 38%; right: 3%; }
-
-/* Keyframes */
-@keyframes drift    { 0%,100% { transform: translateY(0) rotate(0deg); }   50% { transform: translateY(-18px) rotate(8deg); } }
-@keyframes spin     { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes bob      { 0%,100% { transform: translateY(0); }               50% { transform: translateY(-14px); } }
-@keyframes float    { 0%,100% { transform: translateY(0) rotate(-3deg); } 50% { transform: translateY(-22px) rotate(3deg); } }
-
-/* Only the home page moves. Inner pages hold still so text is easy to read. */
-.confetti__triangle  { animation: drift 7s ease-in-out infinite; }
-.confetti__arc       { animation: float 9s ease-in-out infinite; }
-.confetti__plus      { animation: spin 20s linear infinite; }
-.confetti__half      { animation: bob 6s ease-in-out infinite; }
-.subpage .confetti { opacity: .6; }
-.subpage .confetti__shape { animation: none; }
 
 /* ============================================================
    NAVIGATION
@@ -1057,3 +1030,64 @@ img { max-width: 100%; display: block; }
   .who__grid { grid-template-columns: 1fr; gap: 28px; }
   .who__photo { max-width: 340px; }
 }
+
+/* ============================================================
+   NEW THEME LAYER: calm, professional, dark-first
+   ============================================================ */
+body { font-size: 17px; letter-spacing: -.005em; }
+h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: var(--font-display); font-weight: 650; letter-spacing: -.025em; }
+
+/* Nav */
+.nav { border-bottom: 1px solid var(--hairline-soft); }
+.nav__logo { background: var(--accent); border: 0; box-shadow: none; border-radius: 10px; color: #0b0b0c; }
+.nav__wordmark { font-weight: 650; font-size: 19px; }
+.nav__links a { font-weight: 500; color: var(--muted); }
+.nav__links a:hover, .nav__links a[aria-current="page"] { color: var(--text); }
+.nav__links a[aria-current="page"] { text-decoration: none; box-shadow: inset 0 -2px 0 var(--accent); padding-bottom: 4px; }
+.nav__cta { background: var(--text); color: var(--bg); border: 0; box-shadow: none; font-weight: 600; padding: 9px 20px; }
+.nav__cta:hover { transform: none; box-shadow: none; opacity: .88; }
+
+/* Buttons */
+.btn { font-weight: 600; padding: 12px 26px; border: 1px solid var(--hairline); box-shadow: none; }
+.btn--primary { background: var(--accent); color: #0b0b0c; border-color: transparent; }
+.btn--ghost { background: transparent; color: var(--text); }
+.btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.btn--ghost:hover { background: var(--surface-2); }
+
+/* Hero with plasma: always a dark banner so the type stays readable in both themes */
+.hero { overflow: hidden; background: #0b0b0c; color: #f2f2f0; isolation: isolate; min-height: 86vh; padding-bottom: 96px; }
+.hero__fx { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; display: block; opacity: .9; }
+.hero::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(11,11,12,.25), rgba(11,11,12,.55) 88%, var(--bg)); pointer-events: none; }
+.hero__eyebrow { background: rgba(255,255,255,.08); color: #f2f2f0; border: 1px solid rgba(255,255,255,.2); box-shadow: none; font-weight: 600; letter-spacing: .1em; backdrop-filter: blur(6px); }
+.hero__eyebrow::before { border: 0; background: var(--accent); width: 7px; height: 7px; }
+.hero__heading { font-weight: 700; color: #fff; line-height: 1.02; letter-spacing: -.035em; }
+.highlight { color: #ff8a55; }
+.highlight::before, .highlight--mustard::before, .highlight--teal::before { display: none; }
+.hero__lead { color: #d6d6d8; }
+.hero__proof { color: #b4b4bb; }
+.hero .btn--ghost { color: #f2f2f0; border-color: rgba(255,255,255,.28); }
+.hero .btn--ghost:hover { background: rgba(255,255,255,.1); }
+
+/* Cards and surfaces: thin borders, soft shadow, no offset blocks */
+.card, .ctaband__box, .stats__grid, .mockup, .feature, .awards__card, .award, .timeline__content, .who__photo {
+  border: 1px solid var(--line); box-shadow: none; border-radius: var(--radius);
+}
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); border-color: var(--hairline); }
+.stats__item { border-left-width: 1px; }
+.stats__item:nth-child(n+3) { border-top-width: 1px; }
+.features__eyebrow { background: transparent; color: var(--accent-text); border: 0; box-shadow: none; padding: 0; letter-spacing: .14em; font-weight: 600; text-transform: uppercase; font-size: 12.5px; }
+.who__photo { border-radius: 18px; box-shadow: var(--shadow-lg); }
+
+/* Closing band with pulsing bars */
+.ctaband__box { position: relative; overflow: hidden; isolation: isolate; background: var(--surface); padding: 64px 24px; }
+.ctaband__bars { position: absolute; inset: 0; z-index: -1; display: flex; opacity: .55; }
+.ctaband__bars span {
+  flex: 1 1 0; height: 100%; transform-origin: bottom;
+  background: linear-gradient(to top, var(--accent), transparent);
+  transform: scaleY(var(--s));
+  animation: pulseBar 2s ease-in-out infinite alternate; animation-delay: var(--d);
+}
+@keyframes pulseBar { from { transform: scaleY(var(--s)); } to { transform: scaleY(calc(var(--s) * .7)); } }
+.ctaband__heading, .ctaband__text, .ctaband__actions { position: relative; }
+
+@media (prefers-reduced-motion: reduce) { .ctaband__bars span { animation: none; } }

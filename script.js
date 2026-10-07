@@ -15,7 +15,7 @@
 
   var showTheme = function (t) {
     rootEl.setAttribute('data-theme', t);
-    if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#15130e' : '#f5efe2');
+    if (themeMeta) themeMeta.setAttribute('content', t === 'dark' ? '#0b0b0c' : '#f7f7f5');
     if (themeBtn) {
       themeBtn.setAttribute('aria-pressed', t === 'dark' ? 'true' : 'false');
       themeBtn.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');

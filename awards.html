@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Awards &mdash; Kelvin Apau</title>
   <meta name="description" content="Best Student in Core Mathematics and Elective ICT, WASSCE, a robotics certificate, freeCodeCamp and five DataCamp course certificates.">
-  <meta name="theme-color" content="#f5efe2">
+  <meta name="theme-color" content="#0b0b0c">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Kelvin Apau">
   <meta property="og:title" content="Awards &mdash; Kelvin Apau">
@@ -17,25 +17,24 @@
   <meta property="og:image:alt" content="Kelvin Apau, Data Science and Analytics student. Portfolio at kevap.vercel.app">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Inline SVG favicon: Memphis style half-coral half-teal -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2312b3a4' stroke='%2317140d' stroke-width='4'/%3E%3Cpath d='M2 32a30 30 0 0 1 60 0z' fill='%23ff5b57'/%3E%3C/svg%3E">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Ccircle cx='32' cy='32' r='11' fill='%23ff6a2b'/%3E%3C/svg%3E">
 
-  <!-- Google Fonts: Bricolage Grotesque (display) + DM Sans (body) -->
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <script>
-    /* Light by default. Dark only if the visitor chose it with the button. Set before paint so there is no flash. */
+    /* Dark by default. Light only if the visitor chose it with the button. Set before paint so there is no flash. */
     (function () {
-      var t = 'light';
+      var t = 'dark';
       try {
         var saved = localStorage.getItem('theme');
-        if (saved === 'dark') t = 'dark';
+        if (saved === 'light') t = 'light';
       } catch (e) {}
       document.documentElement.setAttribute('data-theme', t);
       var m = document.querySelector('meta[name="theme-color"]');
-      if (m) m.setAttribute('content', t === 'dark' ? '#15130e' : '#f5efe2');
+      if (m) m.setAttribute('content', t === 'dark' ? '#0b0b0c' : '#f7f7f5');
     })();
   </script>
   <link rel="stylesheet" href="styles.css">
@@ -44,29 +43,6 @@
 
   <!-- Skip link -->
   <a class="skip" href="#main">Skip to content</a>
-
-  <!-- ============ ANIMATED MEMPHIS CONFETTI ============ -->
-  <div class="confetti" aria-hidden="true">
-    <!-- Coral triangle -->
-    <svg class="confetti__shape confetti__triangle" viewBox="0 0 60 52" width="60" height="52">
-      <polygon points="30,2 58,50 2,50" fill="#ff5b57" stroke="#17140d" stroke-width="4"/>
-    </svg>
-    <!-- Teal quarter-arc -->
-    <svg class="confetti__shape confetti__arc" viewBox="0 0 60 60" width="50" height="50">
-      <path d="M5,55 A50,50 0 0,1 55,5" fill="none" stroke="#12b3a4" stroke-width="8" stroke-linecap="round"/>
-      <path d="M5,55 A50,50 0 0,1 55,5 L55,55 Z" fill="#12b3a4" stroke="#17140d" stroke-width="4" opacity=".85"/>
-    </svg>
-    <!-- Violet plus sign -->
-    <svg class="confetti__shape confetti__plus" viewBox="0 0 44 44" width="44" height="44">
-      <rect x="16" y="2" width="12" height="40" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
-      <rect x="2" y="16" width="40" height="12" rx="3" fill="#6b5be6" stroke="#17140d" stroke-width="3"/>
-    </svg>
-    <!-- Mustard half-circle -->
-    <svg class="confetti__shape confetti__half" viewBox="0 0 50 28" width="50" height="28">
-      <path d="M3,26 A22,22 0 0,1 47,26 Z" fill="#ffc531" stroke="#17140d" stroke-width="3"/>
-    </svg>
-  </div>
-
 
   <!-- ============ NAVIGATION ============ -->
   <nav class="nav" aria-label="Main">
@@ -203,5 +179,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="fx.js"></script>
 </body>
 </html>
