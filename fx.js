@@ -338,6 +338,13 @@ void main() {
     box.innerHTML = html;
   }
 
+  /* One fixed plasma behind every page, so the whole site matches the home hero.
+     Shown in the dark theme only; the light theme keeps the plasma in the home hero. */
+  var page = document.createElement('canvas');
+  page.className = 'page-fx';
+  page.setAttribute('aria-hidden', 'true');
+  document.body.insertBefore(page, document.body.firstChild);
+  plasma(page);
   var c = document.querySelector('.hero__fx');
   if (c) plasma(c);
   var b = document.querySelector('.ctaband__bars');
