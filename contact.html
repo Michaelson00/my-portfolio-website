@@ -54,20 +54,47 @@
 
   <main id="main" class="page">
 
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="contact__inner">
-      <h2 class="contact__heading" id="contact-heading">Let's connect.</h2>
-      <p class="contact__text">I'm aiming to become an AI engineer and building toward internships in data and AI. If you have a role, or a question about my work, get in touch.</p>
-      <div class="contact__email-row">
-        <a class="contact__email" href="mailto:kelvinapau00@gmail.com">kelvinapau00@gmail.com</a>
-        <button class="btn btn--primary contact__copy" type="button" id="copy-btn">Copy email</button>
+  <section class="cx" id="contact" aria-labelledby="contact-heading">
+    <div class="cx__left">
+      <span class="features__eyebrow">Contact</span>
+      <h1 class="cx__heading" id="contact-heading">Let's connect.</h1>
+      <p class="cx__text">I'm aiming to become an AI engineer and building toward internships in data and AI. If you have a role, or a question about my work, get in touch.</p>
+      <div class="portrait portrait--sm" data-portrait>
+        <span class="portrait__glow" aria-hidden="true"></span>
+        <svg class="portrait__orbit" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle cx="200" cy="200" r="190"/><circle class="o2" cx="200" cy="200" r="150"/></svg>
+        <div class="portrait__stage">
+          <span class="portrait__arch" aria-hidden="true"></span>
+          <img class="portrait__img" src="kelvin-cutout.webp" width="900" height="786" alt="Portrait of Kelvin Kwabena Apau in a black suit and tie">
+        </div>
       </div>
-      <p class="contact__status" role="status" id="copy-status"></p>
-      <div class="contact__links">
-        <a class="btn btn--ghost" href="https://linkedin.com/in/kelvin-apau-a300a73b3">LinkedIn</a>
-        <a class="btn btn--ghost" href="https://github.com/Michaelson00">GitHub</a>
-        <a class="btn btn--ghost" href="Kelvin-Apau-CV.pdf" download>Download CV</a>
-      </div>
+      <p class="cx__avail"><i></i>Open to internships in data and AI</p>
+    </div>
+
+    <div class="cx__right">
+      <form class="cx__form" id="msg-form" novalidate>
+        <h2 class="cx__formtitle"><svg class="ico" width="20" height="20" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /> <path d="m21.854 2.147-10.94 10.939" /></svg>Write me a message</h2>
+        <fieldset class="cx__topics">
+          <legend>What is it about?</legend>
+          <label><input type="radio" name="topic" value="Internship" checked><span>Internship</span></label>
+          <label><input type="radio" name="topic" value="Question about your work"><span>My work</span></label>
+          <label><input type="radio" name="topic" value="Collaboration"><span>Collaboration</span></label>
+          <label><input type="radio" name="topic" value="Hello"><span>Just hello</span></label>
+        </fieldset>
+        <label class="cx__field"><span>Your name</span><input type="text" id="msg-name" autocomplete="name" placeholder="Ama Mensah"></label>
+        <label class="cx__field"><span>Message</span><textarea id="msg-body" rows="5" placeholder="Hi Kelvin, ..."></textarea></label>
+        <div class="cx__actions">
+          <button class="btn btn--primary" type="submit"><svg class="ico" width="18" height="18" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></svg>Open in my email app</button>
+          <button class="btn btn--ghost" type="button" id="copy-btn"><svg class="ico" width="18" height="18" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg>Copy email</button>
+        </div>
+        <p class="contact__status" role="status" id="copy-status">This opens your own email app with the message filled in. Nothing is stored on this site.</p>
+      </form>
+
+      <ul class="cx__links">
+        <li><a href="mailto:kelvinapau00@gmail.com"><span><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" /> <rect x="2" y="4" width="20" height="16" rx="2" /></svg></span><b>Email</b><em>kelvinapau00@gmail.com</em></a></li>
+        <li><a href="https://linkedin.com/in/kelvin-apau-a300a73b3"><span><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /> <rect width="20" height="14" x="2" y="6" rx="2" /></svg></span><b>LinkedIn</b><em>kelvin-apau</em></a></li>
+        <li><a href="https://github.com/Michaelson00"><span><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6a9 9 0 0 0-9 9V3" /> <circle cx="18" cy="6" r="3" /> <circle cx="6" cy="18" r="3" /></svg></span><b>GitHub</b><em>Michaelson00</em></a></li>
+        <li><a href="Kelvin-Apau-CV.pdf" download><span><svg class="ico" width="22" height="22" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3" /> <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /> <path d="m7 10 5 5 5-5" /></svg></span><b>CV</b><em>Download PDF</em></a></li>
+      </ul>
     </div>
   </section>
 
@@ -93,6 +120,8 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="portrait.js"></script>
+  <script src="contact.js"></script>
   <script src="fx.js"></script>
 </body>
 </html>

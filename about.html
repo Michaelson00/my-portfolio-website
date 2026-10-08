@@ -58,9 +58,17 @@
       <span class="features__eyebrow">About Me</span>
       <h2 class="features__heading" id="me-heading">From robotics to data science.</h2>
       <div class="who__grid">
-      <figure class="who__photo">
-        <img src="kelvin.jpg" width="900" height="825" alt="Portrait of Kelvin Kwabena Apau in a black suit and tie" fetchpriority="high">
-      </figure>
+      <div class="portrait " data-portrait>
+        <span class="portrait__glow" aria-hidden="true"></span>
+        <svg class="portrait__orbit" viewBox="0 0 400 400" aria-hidden="true" focusable="false"><circle cx="200" cy="200" r="190"/><circle class="o2" cx="200" cy="200" r="150"/></svg>
+        <div class="portrait__stage">
+          <span class="portrait__arch" aria-hidden="true"></span>
+          <img class="portrait__img" src="kelvin-cutout.webp" width="900" height="786" alt="Portrait of Kelvin Kwabena Apau in a black suit and tie">
+        </div>
+      <span class="portrait__chip portrait__chip--a"><svg class="ico" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3" /> <path d="M3 5V19A9 3 0 0 0 21 19V5" /> <path d="M3 12A9 3 0 0 0 21 12" /></svg>Python and pandas</span>
+      <span class="portrait__chip portrait__chip--b"><svg class="ico" width="16" height="16" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" /> <path d="M22 10v6" /> <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" /></svg>GCTU, year 3</span>
+      <span class="portrait__chip portrait__chip--c"><i></i>Open to internships</span>
+      </div>
       <div class="who__text">
         <p>I am Kelvin Kwabena Apau, a third year Data Science and Analytics student at Ghana Communication Technology University.</p>
         <p>I got into technology through robotics at senior high school, where I was the lead programmer. Today I turn real data into clear answers, and I am working toward becoming an AI engineer.</p>
@@ -166,6 +174,7 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="portrait.js"></script>
   <script src="fx.js"></script>
 </body>
 </html>
