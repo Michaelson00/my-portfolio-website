@@ -1529,15 +1529,21 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highl
 .intro__panel--bottom { bottom: 0; }
 .has-intro.intro-done .intro__panel--top { transform: translateY(-101%); }
 .has-intro.intro-done .intro__panel--bottom { transform: translateY(101%); }
-.intro__center { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 18px; text-align: center; transition: opacity .35s ease, transform .5s ease; }
+.intro__center { z-index: 2; position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 18px; text-align: center; transition: opacity .35s ease, transform .5s ease; }
 .has-intro.intro-done .intro__center { opacity: 0; transform: scale(.98); }
 .intro__name { margin: 0; display: flex; overflow: hidden; padding: 0 .05em .12em; font-size: clamp(34px, 7vw, 68px); font-weight: 700; letter-spacing: -.03em; line-height: 1.15; color: #f5f5f4; }
 .intro__name span { display: inline-block; transform: translateY(115%); animation: introUp .8s cubic-bezier(.2, .8, .2, 1) calc(.15s + var(--i) * .04s) forwards; }
 .intro__line { display: block; width: min(180px, 40vw); height: 2px; background: #ff6a2b; transform: scaleX(0); animation: introLine .8s cubic-bezier(.65, 0, .35, 1) .7s forwards; }
 .intro__role { margin: 0; color: #a8a29e; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; opacity: 0; animation: introFade .6s ease 1s forwards; }
-.intro__skip { position: absolute; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); background: none; color: #78716c; border: 0; padding: 10px 12px; font: inherit; font-size: 13px; letter-spacing: .08em; cursor: pointer; min-height: 40px; transition: opacity .3s; }
+.intro__skip { position: absolute; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); background: none; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6); border: 0; padding: 10px 12px; font: inherit; font-size: 13px; letter-spacing: .08em; cursor: pointer; min-height: 40px; transition: opacity .3s; }
 .has-intro.intro-done .intro__skip { opacity: 0; }
 .intro__skip:hover, .intro__skip:focus-visible { color: #fff; }
+.intro__bars { position: absolute; inset: 0; display: flex; pointer-events: none; }
+.intro__bars span { flex: 1 0 0; margin-right: -1px; backface-visibility: hidden; height: 100%; transform: scaleY(0); animation: introBarIn .9s cubic-bezier(.2, .8, .2, 1) var(--in) forwards, introBarPulse 2s ease-in-out calc(var(--in) + .9s) infinite alternate; }
+.intro__bars--bottom span { transform-origin: bottom; background: linear-gradient(to top, rgb(255, 60, 0), transparent); }
+.intro__bars--top span { transform-origin: top; background: linear-gradient(to bottom, rgb(255, 60, 0), transparent); } /* inverted: hangs from the top */
+@keyframes introBarIn { to { transform: scaleY(var(--s)); } }
+@keyframes introBarPulse { from { transform: scaleY(var(--s)); } to { transform: scaleY(calc(var(--s) * .7)); } }
 @keyframes introUp { to { transform: none; } }
 @keyframes introLine { to { transform: scaleX(1); } }
 @keyframes introFade { to { opacity: 1; } }

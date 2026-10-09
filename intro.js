@@ -5,6 +5,18 @@
   if (!intro || !root.classList.contains('has-intro')) return;
 
   var skip = document.getElementById('intro-skip');
+
+  // 15 gradient bars, tallest at the edges and shortest in the middle (same shape as the call-to-action band)
+  var N = 15;
+  intro.querySelectorAll('.intro__bars').forEach(function (box) {
+    var html = '';
+    for (var i = 0; i < N; i++) {
+      var d = Math.abs(i / (N - 1) - 0.5) * 2;
+      var s = (0.3 + 0.7 * Math.pow(d, 1.2)) * 0.8; // 0.8 keeps the bars clear of the name
+      html += '<span style="--s:' + s.toFixed(3) + ';--in:' + (0.05 + Math.abs(i - (N - 1) / 2) * 0.03).toFixed(2) + 's"></span>';
+    }
+    box.innerHTML = html;
+  });
   var done = false;
   var timers = [];
 
@@ -22,7 +34,7 @@
   }
 
   // finish automatically
-  later(finish, 1900);
+  later(finish, 2300);
 
   skip.addEventListener('click', finish);
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') finish(); });
