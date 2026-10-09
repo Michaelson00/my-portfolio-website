@@ -1160,7 +1160,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .card__icon .ico { width: 28px; height: 28px; display: block; }
 .card:hover .card__icon { border-color: rgba(255,138,85,.6); box-shadow: inset 0 1px 0 rgba(255,255,255,.16), 0 10px 28px -10px rgba(255,106,43,.8); }
 .nav__logo { color: #0b0b0c; }
-.nav__logo .ico { width: 24px; height: 24px; }
+.nav__logo .ico { width: 30px; height: 30px; }
 
 /* ============================================================
    JOURNEY: centred line, cards alternate sides, sized to their text
