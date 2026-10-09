@@ -1508,3 +1508,13 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .yr__cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 @media (max-width: 860px) { .yr__cards { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 620px) { .yr__row { grid-template-columns: minmax(0, 1fr); gap: 14px; } .yr__row:not(:last-child)::before { display: none; } .yr__year span { width: 110px; height: 44px; font-size: 20px; } }
+
+/* Device calibration: notches, text sizing, touch */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+@supports (padding: max(0px)) {
+  .nav__inner, .footer { padding-left: max(var(--gutter, 20px), env(safe-area-inset-left)); padding-right: max(var(--gutter, 20px), env(safe-area-inset-right)); }
+  body { padding-bottom: env(safe-area-inset-bottom); }
+}
+@media (hover: none) and (pointer: coarse) {
+  .nav__links a, .btn, .chip, .social a { min-height: 44px; }
+}
