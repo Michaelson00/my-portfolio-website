@@ -41,8 +41,28 @@
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Kelvin Apau","url":"https://kevap.vercel.app/","image":"https://kevap.vercel.app/og-image.png","jobTitle":"Data Science and Analytics student","alumniOf":{"@type":"CollegeOrUniversity","name":"Ghana Communication Technology University"},"address":{"@type":"PostalAddress","addressCountry":"GH"},"sameAs":["https://www.linkedin.com/in/kelvin-apau-a300a73b3","https://github.com/Michaelson00","https://www.kaggle.com/kelvinmichaelson"]}
   </script>
+  <script>
+    try { if (!sessionStorage.getItem('intro-seen') && !matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('has-intro'); } catch (e) {}
+  </script>
 </head>
 <body>
+
+  <!-- ============ WELCOME INTRO (first visit per session) ============ -->
+  <div class="intro" id="intro" role="presentation" aria-hidden="true">
+    <div class="intro__inner">
+      <svg class="intro__mark" viewBox="0 0 64 64" width="96" height="96" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+        <rect class="intro__tile" x="1.5" y="1.5" width="61" height="61" rx="16" stroke-width="1.5"/>
+        <path class="intro__d" pathLength="1" d="M19 14v36"/>
+        <path class="intro__d" pathLength="1" d="M19 35l8-7 7 5 10-14"/>
+        <path class="intro__d" pathLength="1" d="M29 38l15 12"/>
+        <circle class="intro__dot" cx="44" cy="19" r="4.6" fill="currentColor" stroke="none"/>
+      </svg>
+      <p class="intro__hello"><span id="intro-text"></span><i class="intro__caret"></i></p>
+      <p class="intro__role">Data Science and Analytics</p>
+      <div class="intro__bar"><i></i></div>
+    </div>
+    <button class="intro__skip" type="button" id="intro-skip">Skip</button>
+  </div>
 
   <!-- Skip link -->
   <a class="skip" href="#main">Skip to content</a>
@@ -266,5 +286,6 @@
 
   <script src="script.js"></script>
   <script src="fx.js"></script>
+  <script src="intro.js"></script>
 </body>
 </html>
