@@ -7,6 +7,8 @@
 (function () {
   'use strict';
 
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   /* ---- Footer year ---- */
   var yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -58,52 +60,6 @@
         copyTimer = setTimeout(function () { copyStatus.textContent = ''; }, 3500);
       }
     });
-  }
-
-  /* ---- Analysis dashboard: staged entrance + count-up numbers ---- */
-  var dash = document.getElementById('dash');
-
-  if (dash && 'IntersectionObserver' in window &&
-      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var counters = Array.prototype.slice.call(dash.querySelectorAll('[data-count]'));
-
-    var countUp = function (el, delay) {
-      var target = parseFloat(el.getAttribute('data-count'));
-      var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
-      var suffix = el.getAttribute('data-suffix') || '';
-      var duration = 1400;
-      var start = null;
-
-      var step = function (now) {
-        if (start === null) start = now;
-        var t = Math.min((now - start) / duration, 1);
-        var eased = 1 - Math.pow(1 - t, 3);
-        el.textContent = (target * eased).toFixed(decimals) + suffix;
-        if (t < 1) requestAnimationFrame(step);
-      };
-
-      el.textContent = (0).toFixed(decimals) + suffix;
-      setTimeout(function () { requestAnimationFrame(step); }, delay);
-    };
-
-    // Hide first, so the content is only visible if JS can reveal it
-    dash.classList.add('anim-ready');
-    counters.forEach(function (el) {
-      var suffix = el.getAttribute('data-suffix') || '';
-      el.textContent = (0).toFixed(parseInt(el.getAttribute('data-decimals') || '0', 10)) + suffix;
-    });
-
-    var dashObserver = new IntersectionObserver(function (entries) {
-      if (!entries[0].isIntersecting) return;
-      dashObserver.disconnect();
-      dash.classList.add('is-visible');
-      counters.forEach(function (el) {
-        var panel = el.closest('.dash__panel');
-        var i = panel ? parseInt(panel.style.getPropertyValue('--i'), 10) || 0 : 0;
-        countUp(el, 350 + i * 150);
-      });
-    }, { threshold: 0.2 });
-    dashObserver.observe(dash);
   }
 
   /* ---- "Where next?" cards: timeline-style line + zoom in/out with scroll ---- */

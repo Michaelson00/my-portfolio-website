@@ -1,0 +1,15 @@
+{
+  "name": "Kelvin Apau, Data Science and Analytics",
+  "short_name": "Kelvin Apau",
+  "description": "Portfolio of Kelvin Apau, a Data Science and Analytics student at GCTU in Ghana.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#060607",
+  "theme_color": "#060607",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"},
+    {"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "installCommand": null,
+  "outputDirectory": ".",
+  "redirects": [
+    {
+      "source": "/analysis.html",
+      "destination": "/projects.html#numbers",
+      "permanent": true
+    },
+    {
+      "source": "/timeline.html",
+      "destination": "/about.html#timeline",
+      "permanent": true
+    },
+    {
+      "source": "/background.html",
+      "destination": "/about.html#work",
+      "permanent": true
+    }
+  ]
+}
