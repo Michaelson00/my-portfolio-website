@@ -314,13 +314,16 @@ void main() {
       if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; gl.viewport(0, 0, w, h); }
     }
     function draw(now) {
-      raf = 0;
+      raf = 0; warmed = true;
       size();
       gl.uniform4f(uScene, canvas.width, canvas.height, ((now - start) / 1000) * U.timeScale, U.colorCount);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
-      if (!still && inView && shown) raf = requestAnimationFrame(draw);
+      if (!still && inView && shown && !held) raf = requestAnimationFrame(draw);
     }
-    function go() { if (!raf) raf = requestAnimationFrame(draw); }
+    var held = document.documentElement.classList.contains('has-intro'); // stay idle while the welcome intro plays, so it runs smoothly
+    var warmed = false; // while held, draw one frame behind the opaque intro so the shader is compiled before the reveal
+    function go() { if (!raf && (!held || !warmed)) raf = requestAnimationFrame(draw); }
+    window.addEventListener('intro:done', function () { held = false; go(); });
     new IntersectionObserver(function (e) { inView = e[0].isIntersecting; if (inView) go(); }).observe(canvas);
     document.addEventListener('visibilitychange', function () { shown = document.visibilityState === 'visible'; if (shown) go(); });
     window.addEventListener('resize', go);
