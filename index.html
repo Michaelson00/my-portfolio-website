@@ -49,17 +49,12 @@
 
   <!-- ============ WELCOME INTRO (first visit per session) ============ -->
   <div class="intro" id="intro" role="presentation" aria-hidden="true">
-    <div class="intro__inner">
-      <svg class="intro__mark" viewBox="0 0 64 64" width="96" height="96" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
-        <rect class="intro__tile" x="1.5" y="1.5" width="61" height="61" rx="16" stroke-width="1.5"/>
-        <path class="intro__d" pathLength="1" d="M19 14v36"/>
-        <path class="intro__d" pathLength="1" d="M19 35l8-7 7 5 10-14"/>
-        <path class="intro__d" pathLength="1" d="M29 38l15 12"/>
-        <circle class="intro__dot" cx="44" cy="19" r="4.6" fill="currentColor" stroke="none"/>
-      </svg>
-      <p class="intro__hello"><span id="intro-text"></span><i class="intro__caret"></i></p>
+    <div class="intro__panel intro__panel--top"></div>
+    <div class="intro__panel intro__panel--bottom"></div>
+    <div class="intro__center">
+      <p class="intro__name"><span style="--i:0">K</span><span style="--i:1">e</span><span style="--i:2">l</span><span style="--i:3">v</span><span style="--i:4">i</span><span style="--i:5">n</span><span style="--i:6">&nbsp;</span><span style="--i:7">A</span><span style="--i:8">p</span><span style="--i:9">a</span><span style="--i:10">u</span></p>
+      <i class="intro__line"></i>
       <p class="intro__role">Data Science and Analytics</p>
-      <div class="intro__bar"><i></i></div>
     </div>
     <button class="intro__skip" type="button" id="intro-skip">Skip</button>
   </div>
