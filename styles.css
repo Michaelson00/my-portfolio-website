@@ -1386,7 +1386,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 @media (max-width: 520px) { .cx__links { grid-template-columns: 1fr; } .cx__form { padding: 20px; } }
 
 /* ============================================================
-   ID CARD frame for the About picture: viewfinder corners, scan line, barcode
+   ID CARD frame for the About picture: viewfinder corners, barcode
    ============================================================ */
 .who__grid { grid-template-columns: 380px 1fr; gap: 56px; align-items: center; }
 .idcard { --px: 0; --py: 0; perspective: 900px; width: min(380px, 100%); }
@@ -1409,8 +1409,8 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .idcard__c--tr { top: 12px; right: 12px; border-left: 0; border-bottom: 0; border-radius: 0 6px 0 0; }
 .idcard__c--bl { bottom: 12px; left: 12px; border-right: 0; border-top: 0; border-radius: 0 0 0 6px; }
 .idcard__c--br { bottom: 12px; right: 12px; border-left: 0; border-top: 0; border-radius: 0 0 6px 0; }
-.idcard__scan { position: absolute; left: 0; right: 0; height: 2px; z-index: 2; background: linear-gradient(90deg, transparent, #ff8a55, transparent); box-shadow: 0 0 14px 2px rgba(255,106,43,.6); animation: scanMove 5s ease-in-out infinite; }
-@keyframes scanMove { 0%, 100% { top: 8%; opacity: 0; } 15%, 85% { opacity: 1; } 50% { top: 92%; } }
+
+
 .idcard__info { padding: 16px 4px 4px; }
 .idcard__info h3 { font-size: 21px; margin-bottom: 2px; }
 .idcard__info p { color: var(--muted); }
@@ -1418,7 +1418,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .idcard__info li { display: inline-flex; align-items: center; gap: 6px; } .idcard__info .ico { color: #ff8a55; }
 .idcard__bars { height: 26px; margin-top: 14px; opacity: .55; background: repeating-linear-gradient(90deg, #f2f2f0 0 2px, transparent 2px 5px, #f2f2f0 5px 6px, transparent 6px 11px, #f2f2f0 11px 14px, transparent 14px 16px); -webkit-mask-image: linear-gradient(90deg, #000, rgba(0,0,0,.4)); mask-image: linear-gradient(90deg, #000, rgba(0,0,0,.4)); border-radius: 3px; }
 @media (max-width: 760px) { .who__grid { grid-template-columns: 1fr; gap: 28px; } .idcard { margin: 0 auto; } }
-@media (prefers-reduced-motion: reduce) { .idcard__scan, .idcard__live i { animation: none; } .idcard__body, .idcard__photo img { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .idcard__live i { animation: none; } .idcard__body, .idcard__photo img { transition: none; } }
 
 /* ============================================================
    FOOTER and real social icons
