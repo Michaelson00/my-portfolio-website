@@ -981,7 +981,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .nav__cta { display: none; }
   .nav__contact-link { display: block; }
-  .nav__toggle { margin-left: 0; }
+  .nav__toggle { margin-left: auto; }
   .hero__heading { font-size: 36px; }
   .logostrip { flex-direction: column; gap: 12px; text-align: center; }
   .logostrip__logos { width: 100%; flex: none; }
