@@ -1558,3 +1558,11 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highl
 .has-intro.intro-done .hero__copy > *:nth-child(4) { transition-delay: .65s; }
 .has-intro.intro-done .hero__copy > *:nth-child(5) { transition-delay: .75s; }
 .has-intro.intro-done .hero__stats, .has-intro.intro-done .stats { opacity: 1; transform: none; transition: opacity .8s ease .9s, transform .9s ease .9s; }
+
+/* ============ 404 page ============ */
+.nf { min-height: 70vh; display: grid; place-items: center; }
+.nf__box { text-align: center; padding: 40px 0; max-width: 560px; }
+.nf__code { margin: 0; font-size: clamp(88px, 22vw, 180px); font-weight: 800; letter-spacing: -.05em; line-height: 1; background: linear-gradient(180deg, #ff8a55, #ff6a2b 60%, rgba(255, 106, 43, .15)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nf__title { margin: 8px 0 12px; font-size: clamp(26px, 5vw, 38px); letter-spacing: -.02em; }
+.nf__text { margin: 0 0 28px; color: var(--muted); }
+.nf__links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
