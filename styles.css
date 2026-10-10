@@ -1178,7 +1178,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .journey__item:nth-child(even) .journey__card { grid-column: 2; margin-right: 0; margin-left: 44px; justify-self: start; }
 .journey__year { display: inline-block; font-size: 12.5px; font-weight: 600; letter-spacing: .12em; color: #ff8a55; background: rgba(255,106,43,.12);
   border: 1px solid rgba(255,138,85,.3); border-radius: 100px; padding: 3px 12px; margin-bottom: 10px; }
-.journey__card h3 { font-size: 19px; margin-bottom: 6px; }
+.journey__card h3 { font-size: 20px; margin-bottom: 6px; }
 .journey__card p { color: var(--muted); font-size: 15.5px; line-height: 1.55; }
 @media (max-width: 760px) {
   .journey__list::before { left: 21px; }
@@ -1456,7 +1456,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .tk__group { display: flex; flex-direction: column; padding: 26px; border-radius: 20px; background: var(--glass); border: 1px solid var(--glass-border); box-shadow: var(--glass-shine), var(--shadow-sm); -webkit-backdrop-filter: blur(18px) saturate(140%); backdrop-filter: blur(18px) saturate(140%); }
 .tk__group header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; }
 .tk__gicon { flex: none; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 14px; color: #ff8a55; background: radial-gradient(circle at 30% 20%, rgba(255,138,85,.28), rgba(255,106,43,.06) 70%), var(--glass); border: 1px solid rgba(255,138,85,.28); }
-.tk__group h3 { font-size: 21px; margin-bottom: 2px; } .tk__group header p { color: var(--muted); font-size: 15px; line-height: 1.5; }
+.tk__group h3 { font-size: 20px; margin-bottom: 2px; } .tk__group header p { color: var(--muted); font-size: 15px; line-height: 1.5; }
 .tk__tools { list-style: none; display: grid; gap: 10px; }
 .tk__tool { display: flex; gap: 14px; align-items: center; padding: 12px 14px; border-radius: 14px; background: rgba(255,255,255,.04); border: 1px solid var(--glass-border); transition: border-color .2s, transform .2s, background .2s; }
 .tk__tool:hover { border-color: rgba(255,138,85,.45); background: rgba(255,106,43,.06); transform: translateX(3px); }
@@ -1493,7 +1493,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .yr__card:hover { transform: translateY(-3px); border-color: rgba(255,138,85,.45); }
 .yr__icon { flex: none; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 12px; color: #ff8a55; background: rgba(255,106,43,.1); border: 1px solid rgba(255,138,85,.28); }
 .yr__card h4 { font-size: 17px; line-height: 1.3; padding-right: 76px; } .yr__card p { color: var(--muted); font-size: 14.5px; line-height: 1.5; margin-top: 4px; }
-.yr__badge { position: absolute; top: 16px; right: 16px; font-size: 12px; font-weight: 600; color: var(--muted); border: 1px solid var(--glass-border); border-radius: 100px; padding: 3px 11px; }
+.yr__badge { position: absolute; top: 16px; right: 16px; font-size: 13px; font-weight: 600; color: var(--muted); border: 1px solid var(--glass-border); border-radius: 100px; padding: 3px 11px; }
 @media (max-width: 760px) { .yr__row { grid-template-columns: 1fr; gap: 14px; } .yr__row::before { display: none; } .yr__year span { width: 110px; height: 44px; font-size: 20px; } .yr__cards { grid-template-columns: 1fr; } }
 .tk__matrix td.tk__total::before { display: none; }
 .card { overflow: hidden; }
@@ -1581,3 +1581,11 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highl
 @keyframes pageFadeOut { to { opacity: 0; } }
 @keyframes pageFadeIn { from { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } }
+
+/* ============ Typography and spacing polish ============ */
+.card__status { font-size: 13px; }
+h1.features__heading { font-size: clamp(28px, 3.2vw, 46px); }
+.features__heading { line-height: 1.15; text-wrap: balance; }
+.features__planned, .dv__sub, .yr__note, .xp__card p, .hero__proof { max-width: 68ch; }
+.hero__proof { margin-left: auto; margin-right: auto; }
+p, li { text-wrap: pretty; }
