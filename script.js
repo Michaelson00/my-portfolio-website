@@ -315,3 +315,10 @@
   });
   update();
 })();
+
+/* Skip the page fade on low-power devices, so navigation stays instant there */
+window.addEventListener('pageswap', function (e) {
+  if (!e.viewTransition) return;
+  var weak = (navigator.deviceMemory && navigator.deviceMemory <= 2) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
+  if (weak) e.viewTransition.skipTransition();
+});

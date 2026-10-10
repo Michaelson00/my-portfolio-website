@@ -1576,7 +1576,6 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highl
 /* ============ Soft fade between pages (browsers that support cross-page view transitions) ============ */
 @view-transition { navigation: auto; }
 .nav { view-transition-name: site-nav; }
-.page-fx { view-transition-name: site-bg; }
 ::view-transition-old(root) { animation: pageFadeOut .22s ease both; }
 ::view-transition-new(root) { animation: pageFadeIn .32s ease .05s both; }
 @keyframes pageFadeOut { to { opacity: 0; } }
