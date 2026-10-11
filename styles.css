@@ -1606,3 +1606,7 @@ p, li, .card__body { text-wrap: pretty; }
 .page > section:first-child:not(.cx) { padding-top: 56px; }
 @media (max-width: 720px) { .page > section:first-child:not(.cx) { padding-top: 40px; } .cx { padding-top: 40px; } }
 .features__eyebrow, .journey__year, .dv__chip, .idcard__top, .tk__used b, .logostrip__label { font-size: 13px; }
+
+/* certificate verify links */
+.yr__verify { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 13.5px; font-weight: 600; color: #ff8a55; border-bottom: 1px solid rgba(255, 138, 85, .35); padding-bottom: 1px; }
+.yr__verify:hover, .yr__verify:focus-visible { color: #fff; border-color: #fff; }
