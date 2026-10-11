@@ -1589,3 +1589,11 @@ h1.features__heading { font-size: clamp(28px, 3.2vw, 46px); }
 .features__planned, .dv__sub, .yr__note, .xp__card p, .hero__proof { max-width: 68ch; }
 .hero__proof { margin-left: auto; margin-right: auto; }
 p, li { text-wrap: pretty; }
+
+/* ============ Typography and spacing polish ============ */
+h1, h2, h3, .features__heading, .card__title { text-wrap: balance; }
+p, li, .card__body { text-wrap: pretty; }
+/* every page starts its first section at the same distance below the nav */
+.page > section:first-child:not(.cx) { padding-top: 56px; }
+@media (max-width: 720px) { .page > section:first-child:not(.cx) { padding-top: 40px; } .cx { padding-top: 40px; } }
+.features__eyebrow, .journey__year, .dv__chip, .idcard__top, .tk__used b, .logostrip__label { font-size: 13px; }
