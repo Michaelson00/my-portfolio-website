@@ -307,11 +307,16 @@
     if (!ticking) { ticking = true; requestAnimationFrame(update); }
   }, { passive: true });
 
-  btn.addEventListener('click', function () {
+  btn.addEventListener('click', function (e) {
     var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
-    var skip = document.querySelector('.skip');
-    if (skip) skip.focus({ preventScroll: true });
+    // Keyboard users keep their place at the top; mouse and touch users see nothing extra
+    if (e.detail === 0) {
+      var skip = document.querySelector('.skip');
+      if (skip) skip.focus({ preventScroll: true });
+    } else {
+      btn.blur();
+    }
   });
   update();
 })();
