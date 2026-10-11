@@ -1289,3 +1289,9 @@ p, li, .card__body { text-wrap: pretty; }
 .yr__verify { display: inline-flex; align-items: center; gap: 5px; margin-top: 10px; font-size: 13.5px; font-weight: 600; color: #ff8a55; border-bottom: 1px solid rgba(255, 138, 85, .35); padding-bottom: 1px; }
 .yr__verify:hover, .yr__verify:focus-visible { color: #fff; border-color: #fff; }
 .tk__group { scroll-margin-top: 96px; }
+
+/* heading levels corrected for screen readers; same look as before */
+.footer__col h2 { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: #ff8a55; font-weight: 600; margin-bottom: 4px; line-height: inherit; }
+.idcard__info h2 { font-size: 21px; margin-bottom: 2px; }
+.yr__card h3 { font-size: 17px; line-height: 1.3; padding-right: 76px; }
+.tk__matrixwrap:focus-visible { outline: 2px solid #ff8a55; outline-offset: 2px; }
