@@ -287,3 +287,38 @@
   }
 
 })();
+
+/* Back-to-top button: appears after scrolling down, smooth-scrolls to the top */
+(function () {
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'totop';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg>';
+  document.body.appendChild(btn);
+
+  var shown = false, ticking = false;
+  function update() {
+    ticking = false;
+    var show = window.scrollY > 700;
+    if (show !== shown) { shown = show; btn.classList.toggle('is-visible', show); }
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+
+  btn.addEventListener('click', function () {
+    var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: calm ? 'auto' : 'smooth' });
+    var skip = document.querySelector('.skip');
+    if (skip) skip.focus({ preventScroll: true });
+  });
+  update();
+})();
+
+/* Skip the page fade on low-power devices, so navigation stays instant there */
+window.addEventListener('pageswap', function (e) {
+  if (!e.viewTransition) return;
+  var weak = (navigator.deviceMemory && navigator.deviceMemory <= 2) || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 2);
+  if (weak) e.viewTransition.skipTransition();
+});

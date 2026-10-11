@@ -6,6 +6,10 @@
 
   var skip = document.getElementById('intro-skip');
 
+  // while the intro is on screen, keep keyboard focus and screen readers on it
+  var behind = Array.prototype.filter.call(document.body.children, function (el) { return el !== intro && el.tagName !== 'SCRIPT'; });
+  behind.forEach(function (el) { el.inert = true; });
+
   // 15 gradient bars, tallest at the edges and shortest in the middle (same shape as the call-to-action band)
   var N = 15;
   intro.querySelectorAll('.intro__bars').forEach(function (box) {
@@ -27,6 +31,7 @@
     done = true;
     timers.forEach(clearTimeout);
     try { sessionStorage.setItem('intro-seen', '1'); } catch (e) {}
+    behind.forEach(function (el) { el.inert = false; });
     root.classList.add('intro-done');
     window.dispatchEvent(new Event('intro:done'));
     // remove from the page once the slide-up has played
