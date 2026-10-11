@@ -1,3 +1,12 @@
+/* Inter (variable, latin), self-hosted. SIL Open Font License, see fonts/Inter-OFL-LICENSE.txt */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/inter-latin-wght-normal.woff2') format('woff2-variations'), url('fonts/inter-latin-wght-normal.woff2') format('woff2');
+}
+
 /* ============================================================
    PORTFOLIO — Kelvin Apau
    Calm dark-first theme: near black canvas, thin borders, soft
