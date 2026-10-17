@@ -1227,6 +1227,13 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-tap-highl
 .intro__name span { display: inline-block; transform: translateY(115%); animation: introUp .8s cubic-bezier(.2, .8, .2, 1) calc(.15s + var(--i) * .04s) forwards; }
 .intro__line { display: block; width: min(180px, 40vw); height: 2px; background: #ff6a2b; transform: scaleX(0); animation: introLine .8s cubic-bezier(.65, 0, .35, 1) .7s forwards; }
 .intro__role { margin: 0; color: #a8a29e; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; opacity: 0; animation: introFade .6s ease 1s forwards; }
+/* intro logo: the K mark draws itself above the name */
+.intro__logo { display: block; width: clamp(68px, 11vw, 96px); height: auto; margin-bottom: 6px; overflow: visible; }
+.intro__ring { fill: #0e0e0f; stroke: #ff6a2b; stroke-opacity: .55; stroke-width: 1.5; stroke-dasharray: 1; stroke-dashoffset: 1; animation: introDraw .7s cubic-bezier(.65, 0, .35, 1) .05s forwards; }
+.intro__k path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: introDraw .45s cubic-bezier(.65, 0, .35, 1) var(--d) forwards; }
+.intro__dot { transform-box: fill-box; transform-origin: center; transform: scale(0); animation: introPop .45s cubic-bezier(.3, 1.6, .5, 1) 1.2s forwards; }
+@keyframes introDraw { to { stroke-dashoffset: 0; } }
+@keyframes introPop { to { transform: scale(1); } }
 .intro__skip { position: absolute; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); background: none; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,.6); border: 0; padding: 10px 12px; font: inherit; font-size: 13px; letter-spacing: .08em; cursor: pointer; min-height: 40px; transition: opacity .3s; }
 .has-intro.intro-done .intro__skip { opacity: 0; }
 .intro__skip:hover, .intro__skip:focus-visible { color: #fff; }
