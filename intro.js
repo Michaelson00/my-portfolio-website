@@ -32,10 +32,19 @@
     timers.forEach(clearTimeout);
     try { sessionStorage.setItem('intro-seen', '1'); } catch (e) {}
     behind.forEach(function (el) { el.inert = false; });
+    // work out where the logo has to fly to (its place in the nav bar)
+    var logo = intro.querySelector('.intro__logo');
+    var target = document.querySelector('.nav__logo');
+    if (logo && target) {
+      var a = logo.getBoundingClientRect(), b = target.getBoundingClientRect();
+      logo.style.setProperty('--s', (b.width / a.width).toFixed(4));
+      logo.style.setProperty('--dx', ((b.left + b.width / 2) - (a.left + a.width / 2)).toFixed(1) + 'px');
+      logo.style.setProperty('--dy', ((b.top + b.height / 2) - (a.top + a.height / 2)).toFixed(1) + 'px');
+    }
     root.classList.add('intro-done');
     window.dispatchEvent(new Event('intro:done'));
     // remove from the page once the slide-up has played
-    later(function () { root.classList.remove('has-intro', 'intro-done'); intro.remove(); }, 2400);
+    later(function () { root.classList.remove('has-intro', 'intro-done'); intro.remove(); }, 2500);
   }
 
   // finish automatically
