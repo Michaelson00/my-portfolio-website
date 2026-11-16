@@ -1001,7 +1001,6 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 .dv__steps li { position: relative; display: flex; align-items: center; gap: 14px; font-size: 15px; }
 .dv__steps li:not(:last-child)::after { content: ''; position: absolute; left: 13px; top: 28px; width: 2px; height: 16px; background: var(--dv-hi); opacity: .6; }
 .dv__steps li.is-live::after { display: none; }
-.dv__steps li:nth-last-child(2)::after { background: linear-gradient(var(--dv-hi), var(--dv-ctx)); }
 .dv__node { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 13px; font-weight: 700; color: #0b0b0c; background: var(--dv-hi); }
 .dv__steps .is-live .dv__node { background: transparent; border: 2px solid var(--dv-ctx); animation: livePulse 2s infinite; }
 .dv__steps em { font-style: normal; }
