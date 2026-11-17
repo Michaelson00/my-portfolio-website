@@ -461,6 +461,7 @@ img { max-width: 100%; display: block; }
 }
 .features__grid--two { grid-template-columns: repeat(2, 1fr); max-width: 800px; }
 .about section + section { padding-top: 0; }
+.features__subheading { font-size: 1.25rem; font-weight: 600; margin: 56px 0 20px; text-align: center; color: var(--text, #fff); }
 .features__planned {
   font-size: 15px;
   color: var(--muted);
