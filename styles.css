@@ -991,6 +991,7 @@ h1, h2, h3, .nav__wordmark, .hero__heading, .features__heading { font-family: va
 /* bars */
 .dv__bars { list-style: none; display: grid; gap: 12px; }
 .dv__bars li { display: grid; grid-template-columns: 82px 1fr 20px; gap: 12px; align-items: center; font-size: 14.5px; border-radius: 8px; }
+.dv__bars--ml li { grid-template-columns: 104px 1fr 38px; }
 .dv__bars div { height: 12px; background: var(--dv-track); border-radius: 6px; overflow: hidden; }
 .dv__bars i { display: block; height: 100%; width: var(--w); background: var(--dv-ctx); border-radius: 0 6px 6px 0; }
 .dv__bars i.hi { background: var(--dv-hi); }
